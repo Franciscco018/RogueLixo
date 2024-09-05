@@ -1,0 +1,156 @@
+[gd_scene load_steps=8 format=3 uid="uid://c8t4nep8ohmjm"]
+
+[ext_resource type="Script" path="res://gameOver.gd" id="1_j7iof"]
+[ext_resource type="FontFile" uid="uid://dc526gcuwx4sa" path="res://fonts/DungeonFont.ttf" id="2_hm15i"]
+
+[sub_resource type="Animation" id="Animation_0vqty"]
+resource_name = "anim"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.0823529), Color(0.733333, 0, 0, 0.886275)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tg0fj"]
+_data = {
+"anim": SubResource("Animation_0vqty")
+}
+
+[sub_resource type="Animation" id="Animation_iqams"]
+resource_name = "face_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("transition/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("transition/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.9),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_xx4f2"]
+resource_name = "face_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("transition/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("transition/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jx5sg"]
+_data = {
+"face_in": SubResource("Animation_iqams"),
+"face_out": SubResource("Animation_xx4f2")
+}
+
+[node name="gameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j7iof")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_tg0fj")
+}
+autoplay = "anim"
+
+[node name="ColorRect" type="ColorRect" parent="AnimationPlayer"]
+self_modulate = Color(0.733333, 0, 0, 0.886275)
+offset_right = 1158.0
+offset_bottom = 658.0
+color = Color(0.6, 0, 0, 0.560784)
+
+[node name="GameOver" type="Label" parent="AnimationPlayer/ColorRect"]
+self_modulate = Color(0.733333, 0, 0, 1)
+layout_mode = 0
+offset_top = 122.0
+offset_right = 1154.0
+offset_bottom = 272.0
+theme_override_colors/font_color = Color(0.733002, 1.64848e-06, 3.85046e-07, 1)
+theme_override_colors/font_shadow_color = Color(0.255014, 0, 0.00760672, 0.901961)
+theme_override_constants/shadow_outline_size = 25
+theme_override_fonts/font = ExtResource("2_hm15i")
+theme_override_font_sizes/font_size = 110
+text = "Game Over"
+horizontal_alignment = 1
+
+[node name="HFlowContainer" type="HFlowContainer" parent="AnimationPlayer/ColorRect"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 442.0
+offset_right = 1152.0
+offset_bottom = 492.0
+alignment = 1
+
+[node name="Jogar" type="Button" parent="AnimationPlayer/ColorRect/HFlowContainer"]
+clip_contents = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.733333, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.733333, 0, 0, 0.788235)
+theme_override_colors/font_hover_color = Color(0.733333, 0, 0, 0.772549)
+theme_override_colors/font_focus_color = Color(0.733333, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_hm15i")
+theme_override_font_sizes/font_size = 41
+text = "Voltar
+"
+
+[node name="transition" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_jx5sg")
+}
+
+[node name="ColorRect" type="ColorRect" parent="transition"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.733333, 0, 0, 0.886275)
+
+[connection signal="pressed" from="AnimationPlayer/ColorRect/HFlowContainer/Jogar" to="." method="_on_jogar_pressed"]
+[connection signal="animation_finished" from="transition" to="." method="_on_transition_animation_finished"]

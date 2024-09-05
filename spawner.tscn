@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dh6uvbv0put5b"]
+
+[ext_resource type="Script" path="res://spawner.gd" id="1_t0vh7"]
+
+[node name="spawner" type="Node2D"]
+position = Vector2(-1, -7)
+script = ExtResource("1_t0vh7")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

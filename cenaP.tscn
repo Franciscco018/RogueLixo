@@ -1,0 +1,376 @@
+[gd_scene load_steps=34 format=3 uid="uid://c7gblk6hpo0e2"]
+
+[ext_resource type="FontFile" uid="uid://dc526gcuwx4sa" path="res://fonts/DungeonFont.ttf" id="1_214wj"]
+[ext_resource type="Script" path="res://Robson.gd" id="1_c0772"]
+[ext_resource type="Texture2D" uid="uid://ct6ud07qvypxb" path="res://assets/Walk.png" id="2_k14rp"]
+[ext_resource type="Texture2D" uid="uid://dpvb5nvbpqq3s" path="res://assets/vassoura- arma.png" id="3_qh7xw"]
+[ext_resource type="PackedScene" uid="uid://dh6uvbv0put5b" path="res://spawner.tscn" id="5_mg44o"]
+[ext_resource type="AudioStream" uid="uid://dp3kaiyet86rf" path="res://sound/xp.MP3" id="8_bvq20"]
+[ext_resource type="AudioStream" uid="uid://bhuuktb5nul0o" path="res://sound/hit.MP3" id="9_4hvlx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_55g3q"]
+size = Vector2(125, 123)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjf7j"]
+atlas = ExtResource("2_k14rp")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fpq1n"]
+atlas = ExtResource("2_k14rp")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_whynp"]
+atlas = ExtResource("2_k14rp")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mn2iv"]
+atlas = ExtResource("2_k14rp")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_876gb"]
+atlas = ExtResource("2_k14rp")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_haegl"]
+atlas = ExtResource("2_k14rp")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xlk4m"]
+atlas = ExtResource("2_k14rp")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2e8d"]
+atlas = ExtResource("2_k14rp")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8sn7v"]
+atlas = ExtResource("2_k14rp")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_okv83"]
+atlas = ExtResource("2_k14rp")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvxhs"]
+atlas = ExtResource("2_k14rp")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rh7bp"]
+atlas = ExtResource("2_k14rp")
+region = Rect2(32, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yb4hx"]
+atlas = ExtResource("2_k14rp")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_81jak"]
+atlas = ExtResource("2_k14rp")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ejdsf"]
+atlas = ExtResource("2_k14rp")
+region = Rect2(48, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kl803"]
+atlas = ExtResource("2_k14rp")
+region = Rect2(48, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xv1di"]
+atlas = ExtResource("2_k14rp")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1y07"]
+atlas = ExtResource("2_k14rp")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xqj8r"]
+atlas = ExtResource("2_k14rp")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbnbf"]
+atlas = ExtResource("2_k14rp")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xe5rc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cjf7j")
+}],
+"loop": true,
+"name": &"idle_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fpq1n")
+}],
+"loop": true,
+"name": &"idle_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_whynp")
+}],
+"loop": true,
+"name": &"idle_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mn2iv")
+}],
+"loop": true,
+"name": &"idle_up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_876gb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_haegl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xlk4m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2e8d")
+}],
+"loop": true,
+"name": &"walk_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8sn7v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_okv83")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hvxhs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rh7bp")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yb4hx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_81jak")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejdsf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kl803")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xv1di")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l1y07")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xqj8r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbnbf")
+}],
+"loop": true,
+"name": &"walk_up",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ck8f2"]
+size = Vector2(132, 129)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2oma7"]
+size = Vector2(77.9286, 180.086)
+
+[sub_resource type="Animation" id="Animation_n0yiy"]
+resource_name = "new_animation"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-15, -2), Vector2(19, -2), Vector2(-15, -2)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_500dp"]
+_data = {
+"new_animation": SubResource("Animation_n0yiy")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 2061.0
+offset_bottom = 1237.0
+color = Color(0.25, 0.1495, 0.0825, 0.870588)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Xp" type="ProgressBar" parent="CanvasLayer"]
+offset_left = 10.0
+offset_top = 620.0
+offset_right = 302.0
+offset_bottom = 647.0
+max_value = 50.0
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.556863)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/ColorRect"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 345.0
+offset_right = 1149.0
+offset_bottom = 648.0
+
+[node name="Voltar" type="Button" parent="CanvasLayer/Control/ColorRect/VBoxContainer"]
+clip_contents = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.399028, 0.171773, 0.0870879, 1)
+theme_override_colors/font_pressed_color = Color(0.4, 0.172549, 0.0862745, 0.815686)
+theme_override_colors/font_hover_color = Color(0.645746, 0.300631, 0.170564, 1)
+theme_override_colors/font_focus_color = Color(0.4, 0.172549, 0.0862745, 1)
+theme_override_fonts/font = ExtResource("1_214wj")
+theme_override_font_sizes/font_size = 41
+text = "Voltar"
+
+[node name="Menu" type="Button" parent="CanvasLayer/Control/ColorRect/VBoxContainer"]
+clip_contents = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.399028, 0.171773, 0.0870879, 1)
+theme_override_colors/font_pressed_color = Color(0.4, 0.172549, 0.0862745, 0.815686)
+theme_override_colors/font_hover_color = Color(0.645746, 0.300631, 0.170564, 1)
+theme_override_colors/font_focus_color = Color(0.4, 0.172549, 0.0862745, 1)
+theme_override_fonts/font = ExtResource("1_214wj")
+theme_override_font_sizes/font_size = 41
+text = "Menu
+"
+
+[node name="Pause" type="Label" parent="CanvasLayer/Control/ColorRect"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 1151.0
+offset_bottom = 234.0
+theme_override_colors/font_color = Color(0.451669, 0.180639, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.863197, 0.37203, 3.85046e-07, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0.729412, 1)
+theme_override_constants/shadow_outline_size = 15
+theme_override_fonts/font = ExtResource("1_214wj")
+theme_override_font_sizes/font_size = 70
+text = "Pausado"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Robson" type="CharacterBody2D" parent="."]
+position = Vector2(545, 301)
+script = ExtResource("1_c0772")
+
+[node name="ColRobson" type="CollisionShape2D" parent="Robson"]
+position = Vector2(-0.5, -1.5)
+shape = SubResource("RectangleShape2D_55g3q")
+
+[node name="AniRobson" type="AnimatedSprite2D" parent="Robson"]
+position = Vector2(-1, 0)
+scale = Vector2(6.21875, 6.21875)
+sprite_frames = SubResource("SpriteFrames_xe5rc")
+animation = &"walk_down"
+
+[node name="AreaRobson" type="Area2D" parent="Robson"]
+
+[node name="ColRobArea" type="CollisionShape2D" parent="Robson/AreaRobson"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_ck8f2")
+
+[node name="arma" type="Sprite2D" parent="Robson"]
+position = Vector2(-15, -2)
+scale = Vector2(1.49219, 1.49219)
+texture = ExtResource("3_qh7xw")
+offset = Vector2(49.72, 0)
+
+[node name="AArma" type="Area2D" parent="Robson/arma"]
+position = Vector2(73.7173, -2.01047)
+scale = Vector2(0.21875, 0.181676)
+
+[node name="ColArma" type="CollisionShape2D" parent="Robson/arma/AArma"]
+position = Vector2(-22.3077, 17.9843)
+shape = SubResource("RectangleShape2D_2oma7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Robson/arma"]
+libraries = {
+"": SubResource("AnimationLibrary_500dp")
+}
+
+[node name="Camera2D" type="Camera2D" parent="Robson"]
+zoom = Vector2(0.5, 0.5)
+limit_left = 0
+limit_top = 0
+
+[node name="Vida" type="ProgressBar" parent="Robson"]
+modulate = Color(1, 0, 0, 1)
+offset_left = -92.0
+offset_top = -91.0
+offset_right = 90.0
+offset_bottom = -64.0
+max_value = 3.0
+value = 3.0
+show_percentage = false
+
+[node name="spawner" parent="." instance=ExtResource("5_mg44o")]
+position = Vector2(592, 166)
+scale = Vector2(1.0032, 1)
+
+[node name="EnemyHandler" type="Node2D" parent="."]
+position = Vector2(8, 2)
+
+[node name="coleta" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_bvq20")
+volume_db = -13.4
+
+[node name="hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_4hvlx")
+
+[connection signal="pressed" from="CanvasLayer/Control/ColorRect/VBoxContainer/Voltar" to="Robson" method="_on_voltar_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/ColorRect/VBoxContainer/Menu" to="Robson" method="_on_menu_pressed"]
+[connection signal="area_entered" from="Robson/AreaRobson" to="Robson" method="_on_area_robson_area_entered"]
+[connection signal="body_shape_entered" from="Robson/AreaRobson" to="Robson" method="_on_area_robson_body_shape_entered"]
+[connection signal="area_entered" from="Robson/arma/AArma" to="Robson" method="_on_a_arma_area_entered"]

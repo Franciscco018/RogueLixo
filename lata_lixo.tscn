@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1vsuaao66px8"]
+
+[ext_resource type="Texture2D" uid="uid://dg11alrqsiog8" path="res://assets/lata_de_lixo.png" id="1_j1uqk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t40oo"]
+size = Vector2(19.213, 11.5191)
+
+[node name="LataLixo" type="Area2D" groups=["lixo"]]
+position = Vector2(67, 41)
+scale = Vector2(2.8, 2.8)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_j1uqk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.11055, 12)
+scale = Vector2(2.82211, 2.43074)
+shape = SubResource("RectangleShape2D_t40oo")

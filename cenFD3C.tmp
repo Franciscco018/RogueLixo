@@ -1,0 +1,65 @@
+[gd_scene load_steps=9 format=3 uid="uid://dlwj3f4js2w58"]
+
+[ext_resource type="Script" path="res://Robson.gd" id="1_c0772"]
+[ext_resource type="Texture2D" uid="uid://bdpmju7r8cp22" path="res://icon.svg" id="2_qrfjv"]
+[ext_resource type="Script" path="res://Enemy.gd" id="3_m5k6y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_55g3q"]
+size = Vector2(125, 123)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ck8f2"]
+size = Vector2(132, 129)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eqaka"]
+size = Vector2(125, 129)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gvydd"]
+radius = 334.055
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4lfxm"]
+size = Vector2(123, 125)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Robson" type="CharacterBody2D" parent="."]
+position = Vector2(167, 152)
+script = ExtResource("1_c0772")
+
+[node name="ColRobson" type="CollisionShape2D" parent="Robson"]
+position = Vector2(-0.5, -1.5)
+shape = SubResource("RectangleShape2D_55g3q")
+
+[node name="SptRosbon" type="Sprite2D" parent="Robson"]
+texture = ExtResource("2_qrfjv")
+
+[node name="AreaRobson" type="Area2D" parent="Robson"]
+
+[node name="ColRobArea" type="CollisionShape2D" parent="Robson/AreaRobson"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_ck8f2")
+
+[node name="Enemy" type="CharacterBody2D" parent="."]
+position = Vector2(728, 257)
+script = ExtResource("3_m5k6y")
+
+[node name="AreaEnemy" type="Area2D" parent="Enemy"]
+
+[node name="SptEnemy" type="Sprite2D" parent="Enemy/AreaEnemy"]
+texture = ExtResource("2_qrfjv")
+
+[node name="ColAreaEnemy" type="CollisionShape2D" parent="Enemy/AreaEnemy"]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_eqaka")
+
+[node name="AreaVisao" type="Area2D" parent="Enemy"]
+position = Vector2(-561, -105)
+
+[node name="ColVisao" type="CollisionShape2D" parent="Enemy/AreaVisao"]
+shape = SubResource("CircleShape2D_gvydd")
+
+[node name="ColEnemy" type="CollisionShape2D" parent="Enemy"]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_4lfxm")
+
+[connection signal="body_entered" from="Enemy/AreaVisao" to="Robson" method="_on_area_visao_body_entered"]
+[connection signal="child_entered_tree" from="Enemy/AreaVisao" to="Robson" method="_on_area_visao_child_entered_tree"]
