@@ -137,6 +137,7 @@ theme_override_fonts/font = ExtResource("2_hm15i")
 theme_override_font_sizes/font_size = 41
 text = "Voltar
 "
+flat = true
 
 [node name="transition" type="AnimationPlayer" parent="."]
 libraries = {

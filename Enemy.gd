@@ -3,7 +3,7 @@ extends CharacterBody2D
 var speed = 150
 var player_pos
 var target_pos
-@onready var player = get_parent().get_node("Robson")
+@onready var player = get_parent().get_parent().get_node("Robson")
 @onready var lixo = preload("res://lixo.tscn")
 
 func _physics_process(delta):

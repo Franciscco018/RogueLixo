@@ -1,0 +1,9 @@
+res://menu.tscn
+res://cenaP.tscn
+res://enemy.tscn
+res://spawner.gd
+res://Robson.gd
+res://Enemy.gd
+res://spawner.tscn
+res://game_over.tscn
+res://creditos.tscn

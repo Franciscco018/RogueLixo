@@ -4,7 +4,6 @@ extends Node2D
 @onready var trash = preload("res://lixo.tscn")
 @onready var lata = preload("res://lata_lixo.tscn")
 
-
 func _on_timer_timeout():
 	var Tpos_x = randi_range(-200,200)
 	var Tpos_y = randi_range(-200,200)

@@ -1,15 +1,18 @@
-extends CharacterBody2D 
+extends CharacterBody2D
 
-var speed = 300
+@onready var lixo = preload("res://lixo.tscn")
+
+var knock = false
 var jogador_detectado = false
 var coletado = false
-var xp = 0
 var enemy_morreu = false
-@onready var lixo = preload("res://lixo.tscn")
-var last_dir = "down"
+
 var vida = 3
 var knockF = -100
-var knock = false
+var xp = 0
+var speed = 300
+
+var last_dir = "down"
 
 func _physics_process(delta):
 	if velocity.y > 0:
@@ -66,6 +69,7 @@ func _on_area_robson_area_entered(area):
 		$"../CanvasLayer/Xp".value +=1
 		coletado = true
 		$"../coleta".play()
+		
 	if area.is_in_group("enemy"):
 		vida -= 1
 		$Vida.value -=1
@@ -73,7 +77,7 @@ func _on_area_robson_area_entered(area):
 		knock = true
 		
 		var dir_enemy = get_parent().target_pos * 3000
-		velocity *= dir_enemy
+		velocity = dir_enemy
 	
 
 func _on_spawn_lixo_timeout():
@@ -91,3 +95,5 @@ func _on_voltar_pressed():
 
 func _on_menu_pressed():
 	get_tree().change_scene_to_file("res://menu.tscn")
+
+

@@ -1,0 +1,30 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1725571366
+cenaP.tscn::PackedScene::7031351564514428039::1725571114::0::1::::<><>::uid://dc526gcuwx4sa::::res://fonts/DungeonFont.ttf<>res://Robson.gd<>uid://ct6ud07qvypxb::::res://assets/Walk.png<>uid://dpvb5nvbpqq3s::::res://assets/vassoura- arma.png<>uid://dh6uvbv0put5b::::res://spawner.tscn<>uid://dp3kaiyet86rf::::res://sound/xp.MP3<>uid://bhuuktb5nul0o::::res://sound/hit.MP3
+creditos.gd::GDScript::-1::1725571114::0::1::::<>Control<>::
+creditos.tscn::PackedScene::2299383519036725441::1725571114::0::1::::<><>::res://creditos.gd<>uid://dc526gcuwx4sa::::res://fonts/DungeonFont.ttf
+Enemy.gd::GDScript::-1::1725571114::0::1::::<>CharacterBody2D<>::
+enemy.tscn::PackedScene::4317743027296627190::1725571114::0::1::::<><>::res://Enemy.gd<>uid://bdpmju7r8cp22::::res://icon.svg
+gameOver.gd::GDScript::-1::1725571114::0::1::::<>Control<>::
+game_over.tscn::PackedScene::7130080627663231462::1725571114::0::1::::<><>::res://gameOver.gd<>uid://dc526gcuwx4sa::::res://fonts/DungeonFont.ttf
+icon.svg::CompressedTexture2D::2628698657693778861::1725571114::1725571190::1::::<><>::
+lata_lixo.tscn::PackedScene::9028652540930053651::1725571114::0::1::::<><>::uid://dg11alrqsiog8::::res://assets/lata_de_lixo.png
+lixo.tscn::PackedScene::3034866992454285403::1725571114::0::1::::<><>::uid://t3vjuyi006x1::::res://assets/sacos de lixo.png
+menu.gd::GDScript::-1::1725571114::0::1::::<>Control<>::
+menu.tscn::PackedScene::6639693423450823226::1725571191::0::1::::<><>::res://menu.gd<>uid://dc526gcuwx4sa::::res://fonts/DungeonFont.ttf
+Robson.gd::GDScript::-1::1725571114::0::1::::<>CharacterBody2D<>::
+spawner.gd::GDScript::-1::1725571114::0::1::::<>Node2D<>::
+spawner.tscn::PackedScene::7715831594569697593::1725571114::0::1::::<><>::res://spawner.gd
+::res://assets/::1725571190
+garrafa de agua jogo do ixo.png::CompressedTexture2D::8965348889335337437::1725571114::1725571190::1::::<><>::
+lata_de_lixo.png::CompressedTexture2D::7635648181094858053::1725571114::1725571190::1::::<><>::
+refrigerante lixo jogo.png::CompressedTexture2D::5843955766989648504::1725571114::1725571190::1::::<><>::
+sacos de lixo.png::CompressedTexture2D::1392682823169748732::1725571114::1725571190::1::::<><>::
+speed_card.png::CompressedTexture2D::5387654962323766572::1725571114::1725571190::1::::<><>::
+vassoura- arma.png::CompressedTexture2D::8255561644605530970::1725571114::1725571190::1::::<><>::
+Walk.png::CompressedTexture2D::6171646167395200603::1725571114::1725571190::1::::<><>::
+::res://fonts/::1725571190
+DungeonFont.ttf::FontFile::7363266108561663216::1725571114::1725571190::1::::<><>::
+::res://sound/::1725571190
+hit.MP3::AudioStreamMP3::2920263342904593404::1725571114::1725571190::1::::<><>::
+xp.MP3::AudioStreamMP3::8270504910161699963::1725571114::1725571190::1::::<><>::
