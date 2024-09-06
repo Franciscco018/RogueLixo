@@ -1,2 +1,7 @@
+AudioStreamPlayer
+CanvasModulate
+PointLight2D
+ColorRect
+Timer
 CollisionShape2D
 Area2D

@@ -13,3 +13,15 @@ func _process(delta):
 
 func _on_voltar_pressed():
 	get_tree().change_scene_to_file("res://menu.tscn")
+
+
+func _on_voltar_mouse_entered():
+	$menu.play()
+
+
+func _on_proximo_pressed():
+	get_tree().change_scene_to_file("res://creditos2.tscn")
+
+
+func _on_proximo_mouse_entered():
+	$menu.play()

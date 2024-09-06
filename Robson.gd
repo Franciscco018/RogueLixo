@@ -75,9 +75,10 @@ func _on_area_robson_area_entered(area):
 		$Vida.value -=1
 		$"../hit".play()
 		knock = true
-		
-		var dir_enemy = get_parent().target_pos * 3000
-		velocity = dir_enemy
+		var dir_enemy = area.get_parent().target_pos * 3000
+		velocity += dir_enemy
+		await(get_tree().create_timer(0.1).timeout)
+		knock = false
 	
 
 func _on_spawn_lixo_timeout():
@@ -97,3 +98,7 @@ func _on_menu_pressed():
 	get_tree().change_scene_to_file("res://menu.tscn")
 
 
+func _on_voltar_mouse_entered():
+	$"../menu".play()
+func _on_menu_mouse_entered():
+	$"../menu".play()

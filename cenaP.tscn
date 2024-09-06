@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://c7gblk6hpo0e2"]
+[gd_scene load_steps=35 format=3 uid="uid://c7gblk6hpo0e2"]
 
 [ext_resource type="FontFile" uid="uid://dc526gcuwx4sa" path="res://fonts/DungeonFont.ttf" id="1_214wj"]
 [ext_resource type="Script" path="res://Robson.gd" id="1_c0772"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dpvb5nvbpqq3s" path="res://assets/vassoura- arma.png" id="3_qh7xw"]
 [ext_resource type="PackedScene" uid="uid://dh6uvbv0put5b" path="res://spawner.tscn" id="5_mg44o"]
 [ext_resource type="AudioStream" uid="uid://dp3kaiyet86rf" path="res://sound/xp.MP3" id="8_bvq20"]
+[ext_resource type="AudioStream" uid="uid://c4ovcduxxw2lh" path="res://sound/effect_menu1.MP3" id="8_n24oj"]
 [ext_resource type="AudioStream" uid="uid://bhuuktb5nul0o" path="res://sound/hit.MP3" id="9_4hvlx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_55g3q"]
@@ -242,8 +243,11 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 3.0
+offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
 visible = false
@@ -251,6 +255,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -17.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.47451)
@@ -259,7 +264,7 @@ color = Color(0, 0, 0, 0.47451)
 layout_mode = 0
 offset_left = 2.0
 offset_top = 345.0
-offset_right = 1149.0
+offset_right = 1147.0
 offset_bottom = 648.0
 
 [node name="Voltar" type="Button" parent="CanvasLayer/Control/ColorRect/VBoxContainer"]
@@ -371,7 +376,12 @@ volume_db = -13.4
 [node name="hit" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_4hvlx")
 
+[node name="menu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_n24oj")
+
+[connection signal="mouse_entered" from="CanvasLayer/Control/ColorRect/VBoxContainer/Voltar" to="Robson" method="_on_voltar_mouse_entered"]
 [connection signal="pressed" from="CanvasLayer/Control/ColorRect/VBoxContainer/Voltar" to="Robson" method="_on_voltar_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/Control/ColorRect/VBoxContainer/Menu" to="Robson" method="_on_menu_mouse_entered"]
 [connection signal="pressed" from="CanvasLayer/Control/ColorRect/VBoxContainer/Menu" to="Robson" method="_on_menu_pressed"]
 [connection signal="area_entered" from="Robson/AreaRobson" to="Robson" method="_on_area_robson_area_entered"]
 [connection signal="body_shape_entered" from="Robson/AreaRobson" to="Robson" method="_on_area_robson_body_shape_entered"]

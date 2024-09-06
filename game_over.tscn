@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://c8t4nep8ohmjm"]
+[gd_scene load_steps=9 format=3 uid="uid://c8t4nep8ohmjm"]
 
 [ext_resource type="Script" path="res://gameOver.gd" id="1_j7iof"]
 [ext_resource type="FontFile" uid="uid://dc526gcuwx4sa" path="res://fonts/DungeonFont.ttf" id="2_hm15i"]
+[ext_resource type="AudioStream" uid="uid://c4ovcduxxw2lh" path="res://sound/effect_menu1.MP3" id="3_awhuq"]
 
 [sub_resource type="Animation" id="Animation_0vqty"]
 resource_name = "anim"
@@ -153,5 +154,9 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.733333, 0, 0, 0.886275)
 
+[node name="menu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_awhuq")
+
+[connection signal="mouse_entered" from="AnimationPlayer/ColorRect/HFlowContainer/Jogar" to="." method="_on_jogar_mouse_entered"]
 [connection signal="pressed" from="AnimationPlayer/ColorRect/HFlowContainer/Jogar" to="." method="_on_jogar_pressed"]
 [connection signal="animation_finished" from="transition" to="." method="_on_transition_animation_finished"]

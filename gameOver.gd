@@ -8,3 +8,7 @@ func _on_jogar_pressed():
 
 func _on_transition_animation_finished(anim_name):
 	get_tree().change_scene_to_file("res://menu.tscn")
+
+
+func _on_jogar_mouse_entered():
+	$menu.play()
