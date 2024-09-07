@@ -41,6 +41,7 @@ flat = true
 
 [node name="Proximo" type="Button" parent="ColorRect"]
 clip_contents = true
+layout_mode = 0
 offset_left = 991.0
 offset_top = 21.0
 offset_right = 1126.0
@@ -83,7 +84,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0.729412, 1)
 theme_override_constants/shadow_outline_size = 15
 theme_override_fonts/font = ExtResource("2_s1ewk")
 theme_override_font_sizes/font_size = 70
-text = "Coder - Francisco
+text = "Coder - Francisco Anderson
 "
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -96,7 +97,8 @@ theme_override_colors/font_outline_color = Color(0, 0, 0.729412, 1)
 theme_override_constants/shadow_outline_size = 15
 theme_override_fonts/font = ExtResource("2_s1ewk")
 theme_override_font_sizes/font_size = 70
-text = "Artistas - Ana Julia, Laryssa e Iasmin
+text = "Artistas - Ana J. Soares, Laryssa e 
+Iasmin Silva
 "
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -122,13 +124,14 @@ theme_override_colors/font_outline_color = Color(0, 0, 0.729412, 1)
 theme_override_constants/shadow_outline_size = 15
 theme_override_fonts/font = ExtResource("2_s1ewk")
 theme_override_font_sizes/font_size = 70
-text = "Gerente - Joao Pedro
+text = "Gerente - Joao P. Augusto
 "
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="menu" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_dbnoh")
+volume_db = -23.0
 
 [connection signal="mouse_entered" from="ColorRect/Voltar" to="." method="_on_voltar_mouse_entered"]
 [connection signal="pressed" from="ColorRect/Voltar" to="." method="_on_voltar_pressed"]

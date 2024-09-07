@@ -3,6 +3,7 @@ extends Node2D
 @onready var enemy = preload("res://enemy.tscn")
 @onready var trash = preload("res://lixo.tscn")
 @onready var lata = preload("res://lata_lixo.tscn")
+@onready var xix = preload("res://xix.tscn")
 
 func _on_timer_timeout():
 	var Tpos_x = randi_range(-200,200)
@@ -15,9 +16,9 @@ func _on_timer_timeout():
 	var Toffset = Vector2(Tpos_x,Tpos_y)
 	var Loffset = Vector2(Lpos_x,Lpos_y)
 	var offsetEne = Vector2(pos_xEne,pos_yEne)
-	var ene = enemy.instantiate()
-	ene.position = position + offsetEne
-	get_parent().get_node("EnemyHandler").add_child(ene)
+	var xixx = xix.instantiate()
+	xixx.position = position + offsetEne
+	get_parent().get_node("EnemyHandler").add_child(xixx)
 	
 	var lixo = trash.instantiate()
 	var lixoL = lata.instantiate()

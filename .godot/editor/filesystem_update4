@@ -1,12 +1,11 @@
 res://menu.tscn
+res://menu.gd
 res://cenaP.tscn
-res://enemy.tscn
 res://spawner.tscn
 res://game_over.tscn
 res://creditos.tscn
-res://Robson.gd
-res://menu.gd
-res://gameOver.gd
-res://creditos.gd
-res://creditos2.gd
 res://creditos2.tscn
+res://Sprite2D.gd
+res://spawner.gd
+res://xix.tscn
+res://Enemy.gd

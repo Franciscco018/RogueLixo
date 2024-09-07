@@ -156,6 +156,7 @@ color = Color(0.733333, 0, 0, 0.886275)
 
 [node name="menu" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_awhuq")
+volume_db = -23.0
 
 [connection signal="mouse_entered" from="AnimationPlayer/ColorRect/HFlowContainer/Jogar" to="." method="_on_jogar_mouse_entered"]
 [connection signal="pressed" from="AnimationPlayer/ColorRect/HFlowContainer/Jogar" to="." method="_on_jogar_pressed"]

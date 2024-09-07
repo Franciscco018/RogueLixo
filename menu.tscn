@@ -1,9 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://c1uk1snhdove5"]
+[gd_scene load_steps=9 format=3 uid="uid://c1uk1snhdove5"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_p4y0p"]
 [ext_resource type="FontFile" uid="uid://dc526gcuwx4sa" path="res://fonts/DungeonFont.ttf" id="1_xyx7m"]
 [ext_resource type="AudioStream" uid="uid://c4ovcduxxw2lh" path="res://sound/effect_menu1.MP3" id="3_08duu"]
-[ext_resource type="AudioStream" uid="uid://du3nodk7n3nj6" path="res://sound/effect_menu2.MP3" id="3_xdlhy"]
 [ext_resource type="AudioStream" uid="uid://dhbhdebof7yib" path="res://sound/musica_menu.MP3" id="5_e55xy"]
 
 [sub_resource type="Animation" id="Animation_fgx1w"]
@@ -161,13 +160,11 @@ color = Color(0.00184107, 0.00184107, 0.00184107, 1)
 
 [node name="menu1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_08duu")
-
-[node name="menu2" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_xdlhy")
+volume_db = -23.0
 
 [node name="music_main" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_e55xy")
-volume_db = -22.487
+volume_db = -35.0
 autoplay = true
 
 [connection signal="mouse_entered" from="ColorRect/VBoxContainer/Jogar" to="." method="_on_jogar_mouse_entered"]
