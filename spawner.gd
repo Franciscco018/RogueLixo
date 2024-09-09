@@ -6,12 +6,12 @@ extends Node2D
 @onready var xix = preload("res://xix.tscn")
 
 func _on_timer_timeout():
-	var Tpos_x = randi_range(-200,200)
-	var Tpos_y = randi_range(-200,200)
-	var Lpos_x = randi_range(-200,200)
-	var Lpos_y = randi_range(-200,200)
-	var pos_xEne = randi_range(-200,200)
-	var pos_yEne = randi_range(-200,200)
+	var Tpos_x = randi_range(0,2000)
+	var Tpos_y = randi_range(0,2000)
+	var Lpos_x = randi_range(0,2000)
+	var Lpos_y = randi_range(0,2000)
+	var pos_xEne = randi_range(0,2000)
+	var pos_yEne = randi_range(0,2000)
 	
 	var Toffset = Vector2(Tpos_x,Tpos_y)
 	var Loffset = Vector2(Lpos_x,Lpos_y)

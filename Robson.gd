@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @onready var lixo = preload("res://lixo.tscn")
+@onready var voltar = $"../CanvasLayer/Control/ColorRect/VBoxContainer/Voltar"
 
 var knock = false
 var jogador_detectado = false
@@ -52,6 +53,9 @@ func _physics_process(delta):
 	var distancia = 1
 	if Input.is_action_pressed("attack"):
 		distancia = 30
+		$arma/AArma/ColArma.disabled = false
+	else:
+		$arma/AArma/ColArma.disabled = true
 	$arma.position = dir * distancia
 	
 	if $"../CanvasLayer/Xp".value == 50:
@@ -61,7 +65,9 @@ func _physics_process(delta):
 	
 	if Input.is_action_pressed("esc"):
 		$"../CanvasLayer/Control/ColorRect".visible = true
-		
+		get_tree().paused = true
+		voltar.grab_focus()
+
 		
 func _on_area_robson_area_entered(area):
 	if area.is_in_group("lixo"):
@@ -76,7 +82,7 @@ func _on_area_robson_area_entered(area):
 		$"../hit".play()
 		knock = true
 		var dir_enemy = area.get_parent().target_pos * 3000
-		velocity += dir_enemy
+		velocity = dir_enemy
 		await(get_tree().create_timer(0.1).timeout)
 		knock = false
 	
@@ -91,8 +97,9 @@ func _on_a_arma_area_entered(area):
 
 
 func _on_voltar_pressed():
+	get_tree().paused = false
 	$"../CanvasLayer/Control/ColorRect".visible = false
-
+	
 
 func _on_menu_pressed():
 	get_tree().change_scene_to_file("res://menu.tscn")

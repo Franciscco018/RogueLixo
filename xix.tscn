@@ -1,9 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://7cg67ynwcl1n"]
+[gd_scene load_steps=3 format=3 uid="uid://7cg67ynwcl1n"]
 
 [ext_resource type="Texture2D" uid="uid://dyrxdmlkxn1r6" path="res://assets/xix.png" id="1_s01ac"]
+[ext_resource type="Script" path="res://Sprite2D.gd" id="2_3fs6c"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(17, 17)
 texture = ExtResource("1_s01ac")
+script = ExtResource("2_3fs6c")

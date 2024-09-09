@@ -5,7 +5,9 @@ res://spawner.tscn
 res://game_over.tscn
 res://creditos.tscn
 res://creditos2.tscn
-res://Sprite2D.gd
-res://spawner.gd
 res://xix.tscn
+res://Sprite2D.gd
 res://Enemy.gd
+res://enemy.tscn
+res://Robson.gd
+res://spawner.gd
