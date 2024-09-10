@@ -235,17 +235,17 @@ color = Color(0.25, 0.1495, 0.0825, 0.870588)
 process_mode = 3
 
 [node name="Xp" type="ProgressBar" parent="CanvasLayer"]
-offset_left = 10.0
-offset_top = 620.0
-offset_right = 302.0
-offset_bottom = 647.0
+offset_left = 5.0
+offset_top = 832.0
+offset_right = 297.0
+offset_bottom = 859.0
+scale = Vector2(1.64245, 1.64245)
 max_value = 50.0
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_right = 1.00139
+anchor_bottom = 0.996667
 offset_top = 3.0
 offset_bottom = 3.0
 grow_horizontal = 2
@@ -259,16 +259,20 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = -17.0
+offset_right = -479.0
+offset_bottom = -176.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.00312, 1)
 color = Color(0, 0, 0, 0.47451)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/ColorRect"]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 345.0
-offset_right = 1147.0
-offset_bottom = 648.0
+offset_right = 762.0
+offset_bottom = 522.0
+scale = Vector2(1.87519, 1.87519)
 
 [node name="Voltar" type="Button" parent="CanvasLayer/Control/ColorRect/VBoxContainer"]
 clip_contents = true
@@ -299,8 +303,9 @@ flat = true
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
-offset_right = 1151.0
-offset_bottom = 234.0
+offset_right = 853.0
+offset_bottom = 209.0
+scale = Vector2(1.68, 1.68)
 theme_override_colors/font_color = Color(0.451669, 0.180639, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.863197, 0.37203, 3.85046e-07, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0.729412, 1)
@@ -312,7 +317,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Robson" type="CharacterBody2D" parent="."]
-position = Vector2(545, 301)
+position = Vector2(1133, 540)
 script = ExtResource("1_c0772")
 
 [node name="ColRobson" type="CollisionShape2D" parent="Robson"]

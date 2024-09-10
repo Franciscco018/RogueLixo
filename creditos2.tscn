@@ -29,6 +29,7 @@ offset_left = 21.0
 offset_top = 22.0
 offset_right = 131.0
 offset_bottom = 72.0
+scale = Vector2(1.41206, 1.41206)
 theme_override_colors/font_color = Color(0.399028, 0.171773, 0.0870879, 1)
 theme_override_colors/font_pressed_color = Color(0.4, 0.172549, 0.0862745, 0.815686)
 theme_override_colors/font_hover_color = Color(0.645746, 0.300631, 0.170564, 1)
@@ -41,7 +42,7 @@ flat = true
 
 [node name="Creditos" type="Label" parent="ColorRect"]
 layout_mode = 0
-offset_right = 1153.0
+offset_right = 1444.0
 offset_bottom = 194.0
 theme_override_colors/font_color = Color(0.451669, 0.180639, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.863197, 0.37203, 3.85046e-07, 1)
@@ -58,8 +59,8 @@ vertical_alignment = 1
 layout_mode = 0
 offset_left = 5.0
 offset_top = 204.0
-offset_right = 1147.0
-offset_bottom = 349.0
+offset_right = 1438.0
+offset_bottom = 496.0
 theme_override_colors/font_color = Color(0.451669, 0.180639, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.863197, 0.37203, 3.85046e-07, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0.729412, 1)

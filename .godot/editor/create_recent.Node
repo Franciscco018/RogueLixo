@@ -1,6 +1,8 @@
 TextureRect
-Sprite2D
+AnimatedSprite2D
+VideoStreamPlayer
 AudioStreamPlayer
+Sprite2D
 CanvasModulate
 PointLight2D
 ColorRect

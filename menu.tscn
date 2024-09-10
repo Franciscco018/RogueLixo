@@ -1,9 +1,228 @@
-[gd_scene load_steps=9 format=3 uid="uid://c1uk1snhdove5"]
+[gd_scene load_steps=41 format=3 uid="uid://c1uk1snhdove5"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_p4y0p"]
 [ext_resource type="FontFile" uid="uid://dc526gcuwx4sa" path="res://fonts/DungeonFont.ttf" id="1_xyx7m"]
 [ext_resource type="AudioStream" uid="uid://c4ovcduxxw2lh" path="res://sound/effect_menu1.MP3" id="3_08duu"]
+[ext_resource type="Texture2D" uid="uid://bsuhgwgrd4c8e" path="res://assets/WKRrf_.png" id="3_cnvbm"]
 [ext_resource type="AudioStream" uid="uid://dhbhdebof7yib" path="res://sound/musica_menu.MP3" id="5_e55xy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqt1k"]
+atlas = ExtResource("3_cnvbm")
+region = Rect2(0, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1wrp"]
+atlas = ExtResource("3_cnvbm")
+region = Rect2(250, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g71gu"]
+atlas = ExtResource("3_cnvbm")
+region = Rect2(500, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_81mu0"]
+atlas = ExtResource("3_cnvbm")
+region = Rect2(750, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgmun"]
+atlas = ExtResource("3_cnvbm")
+region = Rect2(1000, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xv31a"]
+atlas = ExtResource("3_cnvbm")
+region = Rect2(0, 250, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8xcu"]
+atlas = ExtResource("3_cnvbm")
+region = Rect2(250, 250, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbmvb"]
+atlas = ExtResource("3_cnvbm")
+region = Rect2(500, 250, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v13jl"]
+atlas = ExtResource("3_cnvbm")
+region = Rect2(750, 250, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_svuq2"]
+atlas = ExtResource("3_cnvbm")
+region = Rect2(1000, 250, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_taapg"]
+atlas = ExtResource("3_cnvbm")
+region = Rect2(0, 500, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nyia5"]
+atlas = ExtResource("3_cnvbm")
+region = Rect2(250, 500, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wijg7"]
+atlas = ExtResource("3_cnvbm")
+region = Rect2(500, 500, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7f6b"]
+atlas = ExtResource("3_cnvbm")
+region = Rect2(750, 500, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2f0mh"]
+atlas = ExtResource("3_cnvbm")
+region = Rect2(1000, 500, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3sm7a"]
+atlas = ExtResource("3_cnvbm")
+region = Rect2(0, 750, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bigdc"]
+atlas = ExtResource("3_cnvbm")
+region = Rect2(250, 750, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxhoy"]
+atlas = ExtResource("3_cnvbm")
+region = Rect2(500, 750, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m7l2y"]
+atlas = ExtResource("3_cnvbm")
+region = Rect2(750, 750, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o5mqb"]
+atlas = ExtResource("3_cnvbm")
+region = Rect2(1000, 750, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_co8ek"]
+atlas = ExtResource("3_cnvbm")
+region = Rect2(0, 1000, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_de5y8"]
+atlas = ExtResource("3_cnvbm")
+region = Rect2(250, 1000, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_505nr"]
+atlas = ExtResource("3_cnvbm")
+region = Rect2(500, 1000, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlnmf"]
+atlas = ExtResource("3_cnvbm")
+region = Rect2(750, 1000, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rieh6"]
+atlas = ExtResource("3_cnvbm")
+region = Rect2(1000, 1000, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bitm3"]
+atlas = ExtResource("3_cnvbm")
+region = Rect2(0, 1250, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1p8r"]
+atlas = ExtResource("3_cnvbm")
+region = Rect2(250, 1250, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5uxu"]
+atlas = ExtResource("3_cnvbm")
+region = Rect2(500, 1250, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wvw4d"]
+atlas = ExtResource("3_cnvbm")
+region = Rect2(750, 1250, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ii8t"]
+atlas = ExtResource("3_cnvbm")
+region = Rect2(1000, 1250, 250, 250)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pi71x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqt1k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1wrp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g71gu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_81mu0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgmun")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xv31a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8xcu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hbmvb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v13jl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_svuq2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_taapg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nyia5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wijg7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k7f6b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2f0mh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3sm7a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bigdc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yxhoy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m7l2y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o5mqb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_co8ek")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_de5y8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_505nr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlnmf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rieh6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bitm3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l1p8r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h5uxu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wvw4d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ii8t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
 
 [sub_resource type="Animation" id="Animation_fgx1w"]
 length = 0.001
@@ -77,21 +296,31 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_p4y0p")
+metadata/_edit_vertical_guides_ = [1146.0]
+metadata/_edit_horizontal_guides_ = [649.0]
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(13.825, 0)
 layout_mode = 0
-offset_right = 1159.0
-offset_bottom = 652.0
-color = Color(0, 0, 0, 0.47451)
+offset_top = 3.0
+offset_right = 1444.0
+offset_bottom = 902.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+[node name="ColorRect" type="ColorRect" parent="TextureRect"]
 layout_mode = 0
-offset_left = 35.0
-offset_top = 357.0
-offset_right = 168.0
-offset_bottom = 515.0
+offset_right = 1449.0
+offset_bottom = 899.0
+color = Color(0, 0, 0, 0.462745)
 
-[node name="Jogar" type="Button" parent="ColorRect/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/ColorRect"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 473.0
+offset_right = 259.0
+offset_bottom = 631.0
+scale = Vector2(1.81926, 1.81926)
+
+[node name="Jogar" type="Button" parent="TextureRect/ColorRect/VBoxContainer"]
 clip_contents = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.399028, 0.171773, 0.0870879, 1)
@@ -103,7 +332,7 @@ theme_override_font_sizes/font_size = 41
 text = "Jogar"
 flat = true
 
-[node name="Creditos" type="Button" parent="ColorRect/VBoxContainer"]
+[node name="Creditos" type="Button" parent="TextureRect/ColorRect/VBoxContainer"]
 clip_contents = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.399028, 0.171773, 0.0870879, 1)
@@ -116,7 +345,7 @@ text = "Creditos
 "
 flat = true
 
-[node name="Sair" type="Button" parent="ColorRect/VBoxContainer"]
+[node name="Sair" type="Button" parent="TextureRect/ColorRect/VBoxContainer"]
 clip_contents = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.399028, 0.171773, 0.0870879, 1)
@@ -129,12 +358,13 @@ text = "Sair
 "
 flat = true
 
-[node name="RogueLixo" type="Label" parent="ColorRect"]
+[node name="RogueLixo" type="Label" parent="TextureRect/ColorRect"]
 layout_mode = 0
-offset_left = 27.0
-offset_top = 15.0
-offset_right = 332.0
-offset_bottom = 86.0
+offset_left = 79.0
+offset_top = 44.0
+offset_right = 384.0
+offset_bottom = 115.0
+scale = Vector2(1.95664, 1.89288)
 theme_override_colors/font_color = Color(0.451669, 0.180639, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.863197, 0.37203, 3.85046e-07, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0.729412, 1)
@@ -142,6 +372,14 @@ theme_override_constants/shadow_outline_size = 15
 theme_override_fonts/font = ExtResource("1_xyx7m")
 theme_override_font_sizes/font_size = 70
 text = "Rogue Lixo"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TextureRect/ColorRect"]
+position = Vector2(1039, 422)
+rotation = -0.245593
+scale = Vector2(1.756, 1.756)
+sprite_frames = SubResource("SpriteFrames_pi71x")
+autoplay = "default"
+frame_progress = 0.634503
 
 [node name="transition" type="AnimationPlayer" parent="."]
 libraries = {
@@ -160,18 +398,17 @@ color = Color(0.00184107, 0.00184107, 0.00184107, 1)
 
 [node name="menu1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_08duu")
-volume_db = -23.0
+volume_db = -10.612
 
-[node name="music_main" type="AudioStreamPlayer" parent="."]
+[node name="music_menu" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_e55xy")
-volume_db = -35.0
 autoplay = true
 
-[connection signal="mouse_entered" from="ColorRect/VBoxContainer/Jogar" to="." method="_on_jogar_mouse_entered"]
-[connection signal="pressed" from="ColorRect/VBoxContainer/Jogar" to="." method="_on_jogar_pressed"]
-[connection signal="pressed" from="ColorRect/VBoxContainer/Jogar" to="ColorRect/VBoxContainer/Jogar" method="_on_pressed"]
-[connection signal="mouse_entered" from="ColorRect/VBoxContainer/Creditos" to="." method="_on_creditos_mouse_entered"]
-[connection signal="pressed" from="ColorRect/VBoxContainer/Creditos" to="." method="_on_creditos_pressed"]
-[connection signal="mouse_entered" from="ColorRect/VBoxContainer/Sair" to="." method="_on_sair_mouse_entered"]
-[connection signal="pressed" from="ColorRect/VBoxContainer/Sair" to="." method="_on_sair_pressed"]
+[connection signal="mouse_entered" from="TextureRect/ColorRect/VBoxContainer/Jogar" to="." method="_on_jogar_mouse_entered"]
+[connection signal="pressed" from="TextureRect/ColorRect/VBoxContainer/Jogar" to="." method="_on_jogar_pressed"]
+[connection signal="pressed" from="TextureRect/ColorRect/VBoxContainer/Jogar" to="TextureRect/ColorRect/VBoxContainer/Jogar" method="_on_pressed"]
+[connection signal="mouse_entered" from="TextureRect/ColorRect/VBoxContainer/Creditos" to="." method="_on_creditos_mouse_entered"]
+[connection signal="pressed" from="TextureRect/ColorRect/VBoxContainer/Creditos" to="." method="_on_creditos_pressed"]
+[connection signal="mouse_entered" from="TextureRect/ColorRect/VBoxContainer/Sair" to="." method="_on_sair_mouse_entered"]
+[connection signal="pressed" from="TextureRect/ColorRect/VBoxContainer/Sair" to="." method="_on_sair_pressed"]
 [connection signal="animation_finished" from="transition" to="." method="_on_transition_animation_finished"]

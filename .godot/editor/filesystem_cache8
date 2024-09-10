@@ -1,41 +1,43 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1725909437
-2d_lights_and_shadows_neutral_point_light.png::CompressedTexture2D::3413891965053638219::1725905495::1725905495::1::::<><>::
-cenaP.tscn::PackedScene::7031351564514428039::1725909437::0::1::::<><>::uid://dc526gcuwx4sa::::res://fonts/DungeonFont.ttf<>res://Robson.gd<>uid://ct6ud07qvypxb::::res://assets/Walk.png<>uid://dpvb5nvbpqq3s::::res://assets/vassoura- arma.png<>uid://dh6uvbv0put5b::::res://spawner.tscn<>uid://dp3kaiyet86rf::::res://sound/xp.MP3<>uid://c4ovcduxxw2lh::::res://sound/effect_menu1.MP3<>uid://bhuuktb5nul0o::::res://sound/hit.MP3
-creditos2.gd::GDScript::-1::1725905495::0::1::::<>Control<>::
-creditos2.tscn::PackedScene::4734564467289420426::1725905615::0::1::::<><>::uid://dc526gcuwx4sa::::res://fonts/DungeonFont.ttf<>res://creditos2.gd<>uid://c4ovcduxxw2lh::::res://sound/effect_menu1.MP3
-creditos.gd::GDScript::-1::1725905495::0::1::::<>Control<>::
-creditos.tscn::PackedScene::2299383519036725441::1725905615::0::1::::<><>::res://creditos.gd<>uid://dc526gcuwx4sa::::res://fonts/DungeonFont.ttf<>uid://c4ovcduxxw2lh::::res://sound/effect_menu1.MP3
-Enemy.gd::GDScript::-1::1725907099::0::1::::<>CharacterBody2D<>::
-enemy.tscn::PackedScene::4317743027296627190::1725909437::0::1::::<><>::res://Enemy.gd<>uid://bdpmju7r8cp22::::res://icon.svg
-gameOver.gd::GDScript::-1::1725905495::0::1::::<>Control<>::
-game_over.tscn::PackedScene::7130080627663231462::1725909437::0::1::::<><>::res://gameOver.gd<>uid://dc526gcuwx4sa::::res://fonts/DungeonFont.ttf<>uid://c4ovcduxxw2lh::::res://sound/effect_menu1.MP3
-icon.svg::CompressedTexture2D::2628698657693778861::1725905495::1725905495::1::::<><>::
-lata_lixo.tscn::PackedScene::9028652540930053651::1725905495::0::1::::<><>::uid://dg11alrqsiog8::::res://assets/lata_de_lixo.png
-lixo.tscn::PackedScene::3034866992454285403::1725905495::0::1::::<><>::uid://t3vjuyi006x1::::res://assets/sacos de lixo.png
-menu.gd::GDScript::-1::1725905538::0::1::::<>Control<>::
-menu.tscn::PackedScene::6639693423450823226::1725909437::0::1::::<><>::res://menu.gd<>uid://dc526gcuwx4sa::::res://fonts/DungeonFont.ttf<>uid://c4ovcduxxw2lh::::res://sound/effect_menu1.MP3<>uid://dhbhdebof7yib::::res://sound/musica_menu.MP3
-Robson.gd::GDScript::-1::1725909417::0::1::::<>CharacterBody2D<>::
-spawner.gd::GDScript::-1::1725909105::0::1::::<>Node2D<>::
-spawner.tscn::PackedScene::7715831594569697593::1725909437::0::1::::<><>::res://spawner.gd
-Sprite2D.gd::GDScript::-1::1725908714::0::1::::<>Sprite2D<>::
-xix.tscn::PackedScene::2250593131935469117::1725909437::0::1::::<><>::uid://dyrxdmlkxn1r6::::res://assets/xix.png<>res://Sprite2D.gd
-::res://assets/::1725909792
-Carta-roguelixo.png::CompressedTexture2D::4772608070424261726::1725909765::1725909793::1::::<><>::
-Carta-vel.png::CompressedTexture2D::7320674268787161198::1725909780::1725909793::1::::<><>::
-garrafa de agua jogo do ixo.png::CompressedTexture2D::8965348889335337437::1725905495::1725905495::1::::<><>::
-lata_de_lixo.png::CompressedTexture2D::7635648181094858053::1725905495::1725905495::1::::<><>::
-refrigerante lixo jogo.png::CompressedTexture2D::5843955766989648504::1725905495::1725905495::1::::<><>::
-sacos de lixo.png::CompressedTexture2D::1392682823169748732::1725905495::1725905495::1::::<><>::
-speed_card.png::CompressedTexture2D::5387654962323766572::1725905495::1725905495::1::::<><>::
-vassoura- arma.png::CompressedTexture2D::8255561644605530970::1725905495::1725905495::1::::<><>::
-Walk.png::CompressedTexture2D::6171646167395200603::1725905495::1725905495::1::::<><>::
-xix.png::CompressedTexture2D::8880291216185121825::1725905495::1725905495::1::::<><>::
-::res://fonts/::1725905495
-DungeonFont.ttf::FontFile::7363266108561663216::1725905495::1725905495::1::::<><>::
-::res://sound/::1725905495
-effect_menu1.MP3::AudioStreamMP3::6838497939424669161::1725905495::1725905495::1::::<><>::
-effect_menu2.MP3::AudioStreamMP3::8621655997464773557::1725905495::1725905495::1::::<><>::
-hit.MP3::AudioStreamMP3::2920263342904593404::1725905495::1725905495::1::::<><>::
-musica_menu.MP3::AudioStreamMP3::7653078922912937921::1725905495::1725905495::1::::<><>::
-xp.MP3::AudioStreamMP3::8270504910161699963::1725905495::1725905495::1::::<><>::
+::res://::1725976375
+2d_lights_and_shadows_neutral_point_light.png::CompressedTexture2D::3413891965053638219::1725974601::1725974601::1::::<><>::
+cenaP.tscn::PackedScene::7031351564514428039::1725976231::0::1::::<><>::uid://dc526gcuwx4sa::::res://fonts/DungeonFont.ttf<>res://Robson.gd<>uid://ct6ud07qvypxb::::res://assets/Walk.png<>uid://dpvb5nvbpqq3s::::res://assets/vassoura- arma.png<>uid://dh6uvbv0put5b::::res://spawner.tscn<>uid://dp3kaiyet86rf::::res://sound/xp.MP3<>uid://c4ovcduxxw2lh::::res://sound/effect_menu1.MP3<>uid://bhuuktb5nul0o::::res://sound/hit.MP3
+creditos2.gd::GDScript::-1::1725974601::0::1::::<>Control<>::
+creditos2.tscn::PackedScene::4734564467289420426::1725974601::0::1::::<><>::uid://dc526gcuwx4sa::::res://fonts/DungeonFont.ttf<>res://creditos2.gd<>uid://c4ovcduxxw2lh::::res://sound/effect_menu1.MP3
+creditos.gd::GDScript::-1::1725974601::0::1::::<>Control<>::
+creditos.tscn::PackedScene::2299383519036725441::1725974601::0::1::::<><>::res://creditos.gd<>uid://dc526gcuwx4sa::::res://fonts/DungeonFont.ttf<>uid://c4ovcduxxw2lh::::res://sound/effect_menu1.MP3
+Enemy.gd::GDScript::-1::1725974601::0::1::::<>CharacterBody2D<>::
+enemy.tscn::PackedScene::4317743027296627190::1725976231::0::1::::<><>::res://Enemy.gd<>uid://bdpmju7r8cp22::::res://icon.svg
+fundo.jpg::CompressedTexture2D::3744942948703946962::1725976375::1725976376::1::::<><>::
+gameOver.gd::GDScript::-1::1725974601::0::1::::<>Control<>::
+game_over.tscn::PackedScene::7130080627663231462::1725976231::0::1::::<><>::res://gameOver.gd<>uid://dc526gcuwx4sa::::res://fonts/DungeonFont.ttf<>uid://c4ovcduxxw2lh::::res://sound/effect_menu1.MP3
+icon.svg::CompressedTexture2D::2628698657693778861::1725974601::1725974601::1::::<><>::
+lata_lixo.tscn::PackedScene::9028652540930053651::1725976231::0::1::::<><>::uid://dg11alrqsiog8::::res://assets/lata_de_lixo.png
+lixo.tscn::PackedScene::3034866992454285403::1725974601::0::1::::<><>::uid://t3vjuyi006x1::::res://assets/sacos de lixo.png
+menu.gd::GDScript::-1::1725975459::0::1::::<>Control<>::
+menu.tscn::PackedScene::6639693423450823226::1725976231::0::1::::<><>::res://menu.gd<>uid://dc526gcuwx4sa::::res://fonts/DungeonFont.ttf<>uid://dptgw5qb3afpn::::res://assets/fundo.png<>uid://c4ovcduxxw2lh::::res://sound/effect_menu1.MP3<>uid://bsuhgwgrd4c8e::::res://assets/WKRrf_.png<>uid://dhbhdebof7yib::::res://sound/musica_menu.MP3
+Robson.gd::GDScript::-1::1725974601::0::1::::<>CharacterBody2D<>::
+spawner.gd::GDScript::-1::1725974601::0::1::::<>Node2D<>::
+spawner.tscn::PackedScene::7715831594569697593::1725976231::0::1::::<><>::res://spawner.gd
+Sprite2D.gd::GDScript::-1::1725974601::0::1::::<>Sprite2D<>::
+xix.tscn::PackedScene::2250593131935469117::1725976231::0::1::::<><>::uid://dyrxdmlkxn1r6::::res://assets/xix.png<>res://Sprite2D.gd
+::res://assets/::1725976240
+Carta-roguelixo.png::CompressedTexture2D::4772608070424261726::1725974601::1725974601::1::::<><>::
+Carta-vel.png::CompressedTexture2D::7320674268787161198::1725974601::1725974601::1::::<><>::
+garrafa de agua jogo do ixo.png::CompressedTexture2D::8965348889335337437::1725974601::1725974601::1::::<><>::
+lata_de_lixo.png::CompressedTexture2D::7635648181094858053::1725974601::1725974601::1::::<><>::
+refrigerante lixo jogo.png::CompressedTexture2D::5843955766989648504::1725974601::1725974601::1::::<><>::
+sacos de lixo.png::CompressedTexture2D::1392682823169748732::1725974601::1725974601::1::::<><>::
+speed_card.png::CompressedTexture2D::5387654962323766572::1725974601::1725974601::1::::<><>::
+vassoura- arma.png::CompressedTexture2D::8255561644605530970::1725974601::1725974601::1::::<><>::
+Walk.png::CompressedTexture2D::6171646167395200603::1725974601::1725974601::1::::<><>::
+WKRrf_.png::CompressedTexture2D::3691544323531758246::1725975400::1725975400::1::::<><>::
+xix.png::CompressedTexture2D::8880291216185121825::1725974601::1725974601::1::::<><>::
+::res://fonts/::1725974601
+DungeonFont.ttf::FontFile::7363266108561663216::1725974601::1725974601::1::::<><>::
+::res://sound/::1725974986
+effect_menu1.MP3::AudioStreamMP3::6838497939424669161::1725974601::1725974601::1::::<><>::
+effect_menu2.MP3::AudioStreamMP3::8621655997464773557::1725974601::1725974601::1::::<><>::
+hit.MP3::AudioStreamMP3::2920263342904593404::1725974601::1725974601::1::::<><>::
+musica_menu.MP3::AudioStreamMP3::7653078922912937921::1725974601::1725974601::1::::<><>::
+xp.MP3::AudioStreamMP3::8270504910161699963::1725974601::1725974601::1::::<><>::
