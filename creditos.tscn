@@ -103,7 +103,8 @@ theme_override_colors/font_outline_color = Color(0, 0, 0.729412, 1)
 theme_override_constants/shadow_outline_size = 15
 theme_override_fonts/font = ExtResource("2_s1ewk")
 theme_override_font_sizes/font_size = 70
-text = "Artistas - Ana J. Soares, Laryssa Siciliano e 
+text = "Artistas - Ana Julia
+ Soares, Laryssa Siciliano e 
 Iasmin Silva
 "
 horizontal_alignment = 1
@@ -130,7 +131,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0.729412, 1)
 theme_override_constants/shadow_outline_size = 15
 theme_override_fonts/font = ExtResource("2_s1ewk")
 theme_override_font_sizes/font_size = 70
-text = "Gerente - Joao P. Augusto
+text = "Gerente - Joao Pedro Augusto
 "
 horizontal_alignment = 1
 vertical_alignment = 1

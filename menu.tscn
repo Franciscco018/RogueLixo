@@ -296,8 +296,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_p4y0p")
-metadata/_edit_vertical_guides_ = [1146.0]
-metadata/_edit_horizontal_guides_ = [649.0]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(13.825, 0)
@@ -379,7 +377,7 @@ rotation = -0.245593
 scale = Vector2(1.756, 1.756)
 sprite_frames = SubResource("SpriteFrames_pi71x")
 autoplay = "default"
-frame_progress = 0.634503
+frame_progress = 0.79808
 
 [node name="transition" type="AnimationPlayer" parent="."]
 libraries = {
@@ -398,11 +396,13 @@ color = Color(0.00184107, 0.00184107, 0.00184107, 1)
 
 [node name="menu1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_08duu")
-volume_db = -10.612
+volume_db = 2.811
 
 [node name="music_menu" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_e55xy")
+volume_db = 1.513
 autoplay = true
+stream_paused = true
 
 [connection signal="mouse_entered" from="TextureRect/ColorRect/VBoxContainer/Jogar" to="." method="_on_jogar_mouse_entered"]
 [connection signal="pressed" from="TextureRect/ColorRect/VBoxContainer/Jogar" to="." method="_on_jogar_pressed"]

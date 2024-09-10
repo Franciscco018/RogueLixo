@@ -60,6 +60,7 @@ func _physics_process(delta):
 	
 	if $"../CanvasLayer/Xp".value == 50:
 		$"../CanvasLayer/Xp".value = 0
+		
 	if vida == 0:
 		get_tree().change_scene_to_file("res://game_over.tscn")
 	
@@ -77,11 +78,14 @@ func _on_area_robson_area_entered(area):
 		$"../coleta".play()
 		
 	if area.is_in_group("enemy"):
-		vida -= 1
+		area.queue_free()
+		$"../CanvasLayer/Xp".value +=1
+		vida -=1
+		print(vida)
 		$Vida.value -=1
 		$"../hit".play()
 		knock = true
-		var dir_enemy = area.get_parent().target_pos * 3000
+		var dir_enemy = area.get_parent().target_pos * 2000
 		velocity = dir_enemy
 		await(get_tree().create_timer(0.1).timeout)
 		knock = false
@@ -102,6 +106,7 @@ func _on_voltar_pressed():
 	
 
 func _on_menu_pressed():
+	get_tree().paused = false
 	get_tree().change_scene_to_file("res://menu.tscn")
 
 

@@ -94,23 +94,24 @@ grow_vertical = 2
 script = ExtResource("1_j7iof")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "anim"
 libraries = {
 "": SubResource("AnimationLibrary_tg0fj")
 }
-autoplay = "anim"
 
 [node name="ColorRect" type="ColorRect" parent="AnimationPlayer"]
 self_modulate = Color(0.733333, 0, 0, 0.886275)
-offset_right = 1158.0
-offset_bottom = 658.0
+offset_right = 1434.0
+offset_bottom = 897.0
 color = Color(0.6, 0, 0, 0.560784)
 
 [node name="GameOver" type="Label" parent="AnimationPlayer/ColorRect"]
 self_modulate = Color(0.733333, 0, 0, 1)
 layout_mode = 0
-offset_top = 122.0
-offset_right = 1154.0
-offset_bottom = 272.0
+offset_top = 47.0
+offset_right = 872.0
+offset_bottom = 223.0
+scale = Vector2(1.64, 1.64)
 theme_override_colors/font_color = Color(0.733002, 1.64848e-06, 3.85046e-07, 1)
 theme_override_colors/font_shadow_color = Color(0.255014, 0, 0.00760672, 0.901961)
 theme_override_constants/shadow_outline_size = 25
@@ -119,15 +120,16 @@ theme_override_font_sizes/font_size = 110
 text = "Game Over"
 horizontal_alignment = 1
 
-[node name="HFlowContainer" type="HFlowContainer" parent="AnimationPlayer/ColorRect"]
+[node name="HBoxContainer" type="HBoxContainer" parent="AnimationPlayer/ColorRect"]
 layout_mode = 0
-offset_left = 3.0
-offset_top = 442.0
-offset_right = 1152.0
-offset_bottom = 492.0
+offset_left = 4.0
+offset_top = 417.0
+offset_right = 554.0
+offset_bottom = 501.0
+scale = Vector2(2.6, 2.6)
 alignment = 1
 
-[node name="Jogar" type="Button" parent="AnimationPlayer/ColorRect/HFlowContainer"]
+[node name="Jogar" type="Button" parent="AnimationPlayer/ColorRect/HBoxContainer"]
 clip_contents = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.733333, 0, 0, 1)
@@ -158,6 +160,6 @@ color = Color(0.733333, 0, 0, 0.886275)
 stream = ExtResource("3_awhuq")
 volume_db = -23.0
 
-[connection signal="mouse_entered" from="AnimationPlayer/ColorRect/HFlowContainer/Jogar" to="." method="_on_jogar_mouse_entered"]
-[connection signal="pressed" from="AnimationPlayer/ColorRect/HFlowContainer/Jogar" to="." method="_on_jogar_pressed"]
+[connection signal="mouse_entered" from="AnimationPlayer/ColorRect/HBoxContainer/Jogar" to="." method="_on_jogar_mouse_entered"]
+[connection signal="pressed" from="AnimationPlayer/ColorRect/HBoxContainer/Jogar" to="." method="_on_jogar_pressed"]
 [connection signal="animation_finished" from="transition" to="." method="_on_transition_animation_finished"]
