@@ -1,11 +1,11 @@
 res://menu.tscn
 res://menu.gd
-res://Robson.gd
 res://cenaP.tscn
 res://enemy.tscn
 res://game_over.tscn
 res://lata_lixo.tscn
 res://creditos.tscn
 res://creditos2.tscn
-res://Sprite2D.gd
-res://Control.gd
+res://cartas.gd
+res://cartas.tscn
+res://Robson.gd

@@ -96,7 +96,8 @@ func _on_spawn_lixo_timeout():
 
 func _on_a_arma_area_entered(area):
 	if area.is_in_group("enemy"):
-		area.queue_free()
+		if $arma/AArma/ColArma.disabled == true:
+			area.queue_free()
 		$"../CanvasLayer/Xp".value +=1
 
 

@@ -1,13 +1,14 @@
+Label
+Sprite2D
+TextureRect
+Control
 TextureProgressBar
 HBoxContainer
-TextureRect
 AnimatedSprite2D
 VideoStreamPlayer
 AudioStreamPlayer
-Sprite2D
 CanvasModulate
 PointLight2D
 ColorRect
 Timer
 CollisionShape2D
-Area2D

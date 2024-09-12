@@ -380,14 +380,15 @@ position = Vector2(8, 2)
 
 [node name="coleta" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_bvq20")
-volume_db = -13.4
+volume_db = -20.0
 
 [node name="hit" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_4hvlx")
+volume_db = -10.0
 
 [node name="menu" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_n24oj")
-volume_db = -23.0
+volume_db = -10.0
 
 [connection signal="mouse_entered" from="CanvasLayer/Control/ColorRect/VBoxContainer/Voltar" to="Robson" method="_on_voltar_mouse_entered"]
 [connection signal="pressed" from="CanvasLayer/Control/ColorRect/VBoxContainer/Voltar" to="Robson" method="_on_voltar_pressed"]
