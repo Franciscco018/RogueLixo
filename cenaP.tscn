@@ -1,10 +1,15 @@
-[gd_scene load_steps=35 format=3 uid="uid://c7gblk6hpo0e2"]
+[gd_scene load_steps=40 format=3 uid="uid://c7gblk6hpo0e2"]
 
 [ext_resource type="FontFile" uid="uid://dc526gcuwx4sa" path="res://fonts/DungeonFont.ttf" id="1_214wj"]
 [ext_resource type="Script" path="res://Robson.gd" id="1_c0772"]
+[ext_resource type="Script" path="res://cartas.gd" id="1_nmt88"]
+[ext_resource type="Texture2D" uid="uid://b885fmhu2y5yg" path="res://assets/Carta-roguelixo.png" id="2_eoa8d"]
 [ext_resource type="Texture2D" uid="uid://ct6ud07qvypxb" path="res://assets/Walk.png" id="2_k14rp"]
+[ext_resource type="Texture2D" uid="uid://cq55r5jicda1h" path="res://assets/Vida.png" id="3_4qynq"]
 [ext_resource type="Texture2D" uid="uid://dpvb5nvbpqq3s" path="res://assets/vassoura- arma.png" id="3_qh7xw"]
+[ext_resource type="Texture2D" uid="uid://ci025i63jak6w" path="res://assets/speed_card.png" id="5_e16uo"]
 [ext_resource type="PackedScene" uid="uid://dh6uvbv0put5b" path="res://spawner.tscn" id="5_mg44o"]
+[ext_resource type="Texture2D" uid="uid://cv1c6y7wqm1y2" path="res://assets/Dist.png" id="6_xnnax"]
 [ext_resource type="AudioStream" uid="uid://dp3kaiyet86rf" path="res://sound/xp.MP3" id="8_bvq20"]
 [ext_resource type="AudioStream" uid="uid://c4ovcduxxw2lh" path="res://sound/effect_menu1.MP3" id="8_n24oj"]
 [ext_resource type="AudioStream" uid="uid://bhuuktb5nul0o" path="res://sound/hit.MP3" id="9_4hvlx"]
@@ -245,8 +250,8 @@ show_percentage = false
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3
-anchor_right = 1.00139
-anchor_bottom = 0.996667
+anchor_right = 1.42083
+anchor_bottom = 1.32333
 offset_top = 3.0
 offset_bottom = 3.0
 grow_horizontal = 2
@@ -278,10 +283,10 @@ scale = Vector2(1.87519, 1.87519)
 [node name="Voltar" type="Button" parent="CanvasLayer/Control/ColorRect/VBoxContainer"]
 clip_contents = true
 layout_mode = 2
-theme_override_colors/font_color = Color(0.399028, 0.171773, 0.0870879, 1)
-theme_override_colors/font_pressed_color = Color(0.4, 0.172549, 0.0862745, 0.815686)
 theme_override_colors/font_hover_color = Color(0.645746, 0.300631, 0.170564, 1)
+theme_override_colors/font_pressed_color = Color(0.4, 0.172549, 0.0862745, 0.815686)
 theme_override_colors/font_focus_color = Color(0.4, 0.172549, 0.0862745, 1)
+theme_override_colors/font_color = Color(0.399028, 0.171773, 0.0870879, 1)
 theme_override_fonts/font = ExtResource("1_214wj")
 theme_override_font_sizes/font_size = 41
 text = "Voltar"
@@ -290,10 +295,10 @@ flat = true
 [node name="Menu" type="Button" parent="CanvasLayer/Control/ColorRect/VBoxContainer"]
 clip_contents = true
 layout_mode = 2
-theme_override_colors/font_color = Color(0.399028, 0.171773, 0.0870879, 1)
-theme_override_colors/font_pressed_color = Color(0.4, 0.172549, 0.0862745, 0.815686)
 theme_override_colors/font_hover_color = Color(0.645746, 0.300631, 0.170564, 1)
+theme_override_colors/font_pressed_color = Color(0.4, 0.172549, 0.0862745, 0.815686)
 theme_override_colors/font_focus_color = Color(0.4, 0.172549, 0.0862745, 1)
+theme_override_colors/font_color = Color(0.399028, 0.171773, 0.0870879, 1)
 theme_override_fonts/font = ExtResource("1_214wj")
 theme_override_font_sizes/font_size = 41
 text = "Menu
@@ -316,6 +321,145 @@ theme_override_font_sizes/font_size = 70
 text = "Pausado"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Cartas" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1443.0
+offset_bottom = 902.0
+script = ExtResource("1_nmt88")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Cartas"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.47451)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Cartas/ColorRect"]
+layout_mode = 0
+offset_left = 1.00002
+offset_top = 211.0
+offset_right = 393.0
+offset_bottom = 339.0
+scale = Vector2(3.65224, 3.67413)
+
+[node name="Vida" type="TextureRect" parent="CanvasLayer/Cartas/ColorRect/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_eoa8d")
+
+[node name="Vida" type="Sprite2D" parent="CanvasLayer/Cartas/ColorRect/HBoxContainer/Vida"]
+position = Vector2(54, 42)
+scale = Vector2(0.96875, 1)
+texture = ExtResource("3_4qynq")
+
+[node name="NomeV" type="Label" parent="CanvasLayer/Cartas/ColorRect/HBoxContainer/Vida"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 29.0
+offset_top = 17.0
+offset_right = 115.0
+offset_bottom = 38.0
+scale = Vector2(0.639999, 0.639999)
+theme_override_fonts/font = ExtResource("1_214wj")
+theme_override_font_sizes/font_size = 20
+text = "asddadasda"
+
+[node name="DescricaoV" type="Label" parent="CanvasLayer/Cartas/ColorRect/HBoxContainer/Vida"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 31.8443
+offset_top = 56.8842
+offset_right = 79.8443
+offset_bottom = 99.8842
+theme_override_fonts/font = ExtResource("1_214wj")
+theme_override_font_sizes/font_size = 10
+autowrap_mode = 3
+
+[node name="btnV" type="Button" parent="CanvasLayer/Cartas/ColorRect/HBoxContainer/Vida"]
+clip_contents = true
+layout_mode = 0
+offset_left = 22.0
+offset_top = 13.0
+offset_right = 86.0
+offset_bottom = 102.0
+flat = true
+
+[node name="Vel" type="TextureRect" parent="CanvasLayer/Cartas/ColorRect/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_eoa8d")
+
+[node name="Vel" type="Sprite2D" parent="CanvasLayer/Cartas/ColorRect/HBoxContainer/Vel"]
+position = Vector2(55, 41)
+texture = ExtResource("5_e16uo")
+
+[node name="NomeVel" type="Label" parent="CanvasLayer/Cartas/ColorRect/HBoxContainer/Vel"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 29.0
+offset_top = 17.0
+offset_right = 106.0
+offset_bottom = 34.0
+scale = Vector2(0.639999, 0.639999)
+theme_override_fonts/font = ExtResource("1_214wj")
+theme_override_font_sizes/font_size = 20
+text = "asddadasda"
+
+[node name="DescricaoVel" type="Label" parent="CanvasLayer/Cartas/ColorRect/HBoxContainer/Vel"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 31.8443
+offset_top = 56.8842
+offset_right = 79.8443
+offset_bottom = 99.8842
+theme_override_fonts/font = ExtResource("1_214wj")
+theme_override_font_sizes/font_size = 10
+autowrap_mode = 3
+
+[node name="btnVel" type="Button" parent="CanvasLayer/Cartas/ColorRect/HBoxContainer/Vel"]
+clip_contents = true
+offset_left = 22.0
+offset_top = 13.0
+offset_right = 86.0
+offset_bottom = 102.0
+flat = true
+
+[node name="Dist" type="TextureRect" parent="CanvasLayer/Cartas/ColorRect/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_eoa8d")
+
+[node name="Dist" type="Sprite2D" parent="CanvasLayer/Cartas/ColorRect/HBoxContainer/Dist"]
+position = Vector2(54, 38)
+texture = ExtResource("6_xnnax")
+
+[node name="NomeDist" type="Label" parent="CanvasLayer/Cartas/ColorRect/HBoxContainer/Dist"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 29.0
+offset_top = 17.0
+offset_right = 106.0
+offset_bottom = 34.0
+scale = Vector2(0.639999, 0.639999)
+theme_override_fonts/font = ExtResource("1_214wj")
+theme_override_font_sizes/font_size = 20
+text = "asddadasda"
+
+[node name="DescricaoDist" type="Label" parent="CanvasLayer/Cartas/ColorRect/HBoxContainer/Dist"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 31.8443
+offset_top = 56.8842
+offset_right = 79.8443
+offset_bottom = 99.8842
+theme_override_fonts/font = ExtResource("1_214wj")
+theme_override_font_sizes/font_size = 10
+autowrap_mode = 3
+
+[node name="btnDist" type="Button" parent="CanvasLayer/Cartas/ColorRect/HBoxContainer/Dist"]
+clip_contents = true
+offset_left = 22.0
+offset_top = 13.0
+offset_right = 86.0
+offset_bottom = 102.0
+flat = true
 
 [node name="Robson" type="CharacterBody2D" parent="."]
 position = Vector2(1133, 540)
@@ -361,15 +505,33 @@ zoom = Vector2(0.5, 0.5)
 limit_left = 0
 limit_top = 0
 
-[node name="Vida" type="ProgressBar" parent="Robson"]
+[node name="TextureRect" type="TextureRect" parent="Robson"]
+offset_left = -126.0
+offset_top = -95.0
+offset_right = -94.0
+offset_bottom = -63.0
+texture = ExtResource("3_4qynq")
+
+[node name="Vida" type="ProgressBar" parent="Robson/TextureRect"]
 modulate = Color(1, 0, 0, 1)
-offset_left = -92.0
-offset_top = -91.0
-offset_right = 90.0
-offset_bottom = -64.0
+offset_left = 34.0
+offset_top = 4.0
+offset_right = 216.0
+offset_bottom = 31.0
 max_value = 3.0
 value = 3.0
 show_percentage = false
+
+[node name="valorVida" type="Label" parent="Robson/TextureRect/Vida"]
+modulate = Color(0.0295066, 0.0295066, 0.0295066, 1)
+layout_mode = 0
+offset_top = 2.0
+offset_right = 181.0
+offset_bottom = 25.0
+theme_override_fonts/font = ExtResource("1_214wj")
+theme_override_font_sizes/font_size = 41
+text = "1"
+horizontal_alignment = 1
 
 [node name="spawner" parent="." instance=ExtResource("5_mg44o")]
 position = Vector2(592, 166)
@@ -394,5 +556,8 @@ volume_db = -10.0
 [connection signal="pressed" from="CanvasLayer/Control/ColorRect/VBoxContainer/Voltar" to="Robson" method="_on_voltar_pressed"]
 [connection signal="mouse_entered" from="CanvasLayer/Control/ColorRect/VBoxContainer/Menu" to="Robson" method="_on_menu_mouse_entered"]
 [connection signal="pressed" from="CanvasLayer/Control/ColorRect/VBoxContainer/Menu" to="Robson" method="_on_menu_pressed"]
+[connection signal="pressed" from="CanvasLayer/Cartas/ColorRect/HBoxContainer/Vida/btnV" to="Robson" method="_on_btn_v_pressed"]
+[connection signal="pressed" from="CanvasLayer/Cartas/ColorRect/HBoxContainer/Vel/btnVel" to="Robson" method="_on_btn_vel_pressed"]
+[connection signal="pressed" from="CanvasLayer/Cartas/ColorRect/HBoxContainer/Dist/btnDist" to="Robson" method="_on_btn_dist_pressed"]
 [connection signal="area_entered" from="Robson/AreaRobson" to="Robson" method="_on_area_robson_area_entered"]
 [connection signal="area_entered" from="Robson/arma/AArma" to="Robson" method="_on_a_arma_area_entered"]

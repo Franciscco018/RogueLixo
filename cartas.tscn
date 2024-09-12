@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bspck25sipy5u"]
+[gd_scene load_steps=7 format=3 uid="uid://bspck25sipy5u"]
 
 [ext_resource type="Script" path="res://cartas.gd" id="1_72ci0"]
 [ext_resource type="Texture2D" uid="uid://b885fmhu2y5yg" path="res://assets/Carta-roguelixo.png" id="2_5sxqd"]
 [ext_resource type="Texture2D" uid="uid://cq55r5jicda1h" path="res://assets/Vida.png" id="3_73ljy"]
+[ext_resource type="FontFile" uid="uid://dc526gcuwx4sa" path="res://fonts/DungeonFont.ttf" id="4_3shak"]
 [ext_resource type="Texture2D" uid="uid://ci025i63jak6w" path="res://assets/speed_card.png" id="4_jcea7"]
 [ext_resource type="Texture2D" uid="uid://cv1c6y7wqm1y2" path="res://assets/Dist.png" id="5_kvmoc"]
 
@@ -12,79 +13,128 @@ script = ExtResource("1_72ci0")
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 352.0
+offset_bottom = 124.0
 
-[node name="Vida" type="TextureRect" parent="Control"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
 layout_mode = 0
-offset_left = 13.0
-offset_top = -1.0
-offset_right = 141.0
-offset_bottom = 127.0
+offset_left = 1.00002
+offset_top = 211.0
+offset_right = 393.0
+offset_bottom = 339.0
+scale = Vector2(3.65224, 3.67413)
+
+[node name="Vida" type="TextureRect" parent="Control/HBoxContainer"]
+layout_mode = 2
 texture = ExtResource("2_5sxqd")
 
-[node name="Vida" type="Sprite2D" parent="Control/Vida"]
+[node name="Vida" type="Sprite2D" parent="Control/HBoxContainer/Vida"]
 position = Vector2(54, 42)
 scale = Vector2(0.96875, 1)
 texture = ExtResource("3_73ljy")
 
-[node name="NomeV" type="Label" parent="Control/Vida"]
+[node name="NomeV" type="Label" parent="Control/HBoxContainer/Vida"]
+modulate = Color(0, 0, 0, 1)
 layout_mode = 0
 offset_left = 29.0
-offset_top = 13.0
-offset_right = 69.0
-offset_bottom = 36.0
+offset_top = 17.0
+offset_right = 115.0
+offset_bottom = 38.0
 scale = Vector2(0.639999, 0.639999)
+theme_override_fonts/font = ExtResource("4_3shak")
+theme_override_font_sizes/font_size = 20
+text = "asddadasda"
 
-[node name="DescricaoV" type="Label" parent="Control/Vida"]
+[node name="DescricaoV" type="Label" parent="Control/HBoxContainer/Vida"]
+modulate = Color(0, 0, 0, 1)
 layout_mode = 0
-offset_left = 35.0
-offset_top = 56.0
-offset_right = 75.0
-offset_bottom = 79.0
+offset_left = 31.8443
+offset_top = 56.8842
+offset_right = 79.8443
+offset_bottom = 99.8842
+theme_override_fonts/font = ExtResource("4_3shak")
+theme_override_font_sizes/font_size = 10
+autowrap_mode = 3
 
-[node name="Vel" type="TextureRect" parent="Control"]
-offset_left = 103.0
-offset_top = -2.0
-offset_right = 231.0
-offset_bottom = 126.0
+[node name="btnV" type="Button" parent="Control/HBoxContainer/Vida"]
+clip_contents = true
+layout_mode = 0
+offset_left = 22.0
+offset_top = 13.0
+offset_right = 86.0
+offset_bottom = 102.0
+flat = true
+
+[node name="Vel" type="TextureRect" parent="Control/HBoxContainer"]
+layout_mode = 2
 texture = ExtResource("2_5sxqd")
 
-[node name="Vel" type="Sprite2D" parent="Control/Vel"]
+[node name="Vel" type="Sprite2D" parent="Control/HBoxContainer/Vel"]
 position = Vector2(55, 41)
 texture = ExtResource("4_jcea7")
 
-[node name="NomeVel" type="Label" parent="Control/Vel"]
-offset_left = 34.0
-offset_top = 12.0
-offset_right = 74.0
-offset_bottom = 35.0
+[node name="NomeVel" type="Label" parent="Control/HBoxContainer/Vel"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 29.0
+offset_top = 17.0
+offset_right = 106.0
+offset_bottom = 34.0
+scale = Vector2(0.639999, 0.639999)
+theme_override_fonts/font = ExtResource("4_3shak")
+theme_override_font_sizes/font_size = 20
+text = "asddadasda"
 
-[node name="DescricaoVel" type="Label" parent="Control/Vel"]
-offset_left = 35.0
-offset_top = 57.0
-offset_right = 75.0
-offset_bottom = 80.0
+[node name="DescricaoVel" type="Label" parent="Control/HBoxContainer/Vel"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 31.8443
+offset_top = 56.8842
+offset_right = 79.8443
+offset_bottom = 99.8842
+theme_override_fonts/font = ExtResource("4_3shak")
+theme_override_font_sizes/font_size = 10
+autowrap_mode = 3
 
-[node name="Dist" type="TextureRect" parent="Control"]
-offset_left = 206.0
-offset_top = -4.0
-offset_right = 334.0
-offset_bottom = 124.0
+[node name="btnVel" type="Button" parent="Control/HBoxContainer/Vel"]
+clip_contents = true
+offset_left = 22.0
+offset_top = 13.0
+offset_right = 86.0
+offset_bottom = 102.0
+flat = true
+
+[node name="Dist" type="TextureRect" parent="Control/HBoxContainer"]
+layout_mode = 2
 texture = ExtResource("2_5sxqd")
 
-[node name="Dist" type="Sprite2D" parent="Control/Dist"]
+[node name="Dist" type="Sprite2D" parent="Control/HBoxContainer/Dist"]
 position = Vector2(54, 38)
 texture = ExtResource("5_kvmoc")
 
-[node name="NomeDist" type="Label" parent="Control/Dist"]
-offset_left = 34.0
-offset_top = 12.0
-offset_right = 74.0
-offset_bottom = 35.0
+[node name="NomeDist" type="Label" parent="Control/HBoxContainer/Dist"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 29.0
+offset_top = 17.0
+offset_right = 106.0
+offset_bottom = 34.0
+scale = Vector2(0.639999, 0.639999)
+theme_override_fonts/font = ExtResource("4_3shak")
+theme_override_font_sizes/font_size = 20
+text = "asddadasda"
 
-[node name="DescricaoDist" type="Label" parent="Control/Dist"]
-offset_left = 34.0
-offset_top = 60.0
-offset_right = 74.0
-offset_bottom = 83.0
+[node name="DescricaoDist" type="Label" parent="Control/HBoxContainer/Dist"]
+modulate = Color(0, 0, 0, 1)
+offset_left = 31.8443
+offset_top = 56.8842
+offset_right = 79.8443
+offset_bottom = 99.8842
+theme_override_fonts/font = ExtResource("4_3shak")
+theme_override_font_sizes/font_size = 10
+autowrap_mode = 3
+
+[node name="btnDist" type="Button" parent="Control/HBoxContainer/Dist"]
+clip_contents = true
+offset_left = 22.0
+offset_top = 13.0
+offset_right = 86.0
+offset_bottom = 102.0
+flat = true

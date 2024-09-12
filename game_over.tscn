@@ -132,10 +132,10 @@ alignment = 1
 [node name="Jogar" type="Button" parent="AnimationPlayer/ColorRect/HBoxContainer"]
 clip_contents = true
 layout_mode = 2
-theme_override_colors/font_color = Color(0.733333, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.733333, 0, 0, 0.788235)
 theme_override_colors/font_hover_color = Color(0.733333, 0, 0, 0.772549)
+theme_override_colors/font_pressed_color = Color(0.733333, 0, 0, 0.788235)
 theme_override_colors/font_focus_color = Color(0.733333, 0, 0, 1)
+theme_override_colors/font_color = Color(0.733333, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_hm15i")
 theme_override_font_sizes/font_size = 41
 text = "Voltar

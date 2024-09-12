@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjjganwg4dbc0"
-path="res://.godot/imported/Vida.jpg-3c7d793eb6c9d39125f46a65e2a81285.ctex"
+uid="uid://bovyki8otoa2v"
+path="res://.godot/imported/2d_lights_and_shadows_neutral_point_light.png-c43946d5d2988284ad87db4ce789de0a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Vida.jpg"
-dest_files=["res://.godot/imported/Vida.jpg-3c7d793eb6c9d39125f46a65e2a81285.ctex"]
+source_file="res://assets/2d_lights_and_shadows_neutral_point_light.png"
+dest_files=["res://.godot/imported/2d_lights_and_shadows_neutral_point_light.png-c43946d5d2988284ad87db4ce789de0a.ctex"]
 
 [params]
 
