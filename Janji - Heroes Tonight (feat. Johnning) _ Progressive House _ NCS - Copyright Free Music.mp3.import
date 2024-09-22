@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://djumguwwjniub"
+path="res://.godot/imported/Janji - Heroes Tonight (feat. Johnning) _ Progressive House _ NCS - Copyright Free Music.mp3-655263a181f9bc7c74f8c2cca5a9b86d.mp3str"
+
+[deps]
+
+source_file="res://Janji - Heroes Tonight (feat. Johnning) _ Progressive House _ NCS - Copyright Free Music.mp3"
+dest_files=["res://.godot/imported/Janji - Heroes Tonight (feat. Johnning) _ Progressive House _ NCS - Copyright Free Music.mp3-655263a181f9bc7c74f8c2cca5a9b86d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -24,3 +24,13 @@ func _on_creditos_mouse_entered():
 	$menu1.play()
 func _on_sair_mouse_entered():
 	$menu1.play()
+
+
+func _on_btn_pressed() -> void:
+	$TextureRect/ColorRect/veigar.visible = true
+
+
+func _on_btn_2_pressed() -> void:
+	$TextureRect/ColorRect/sla.visible = true
+	$music_menu.stop()
+	$TextureRect/ColorRect/music2.play()

@@ -1,0 +1,78 @@
+[gd_scene load_steps=5 format=3 uid="uid://cutvc4nljcf4b"]
+
+[ext_resource type="Texture2D" uid="uid://bdywu7fnjcxd2" path="res://assets/carta.png" id="1_g0b6b"]
+[ext_resource type="Script" path="res://item_option.gd" id="2_km2q3"]
+[ext_resource type="Texture2D" uid="uid://ci025i63jak6w" path="res://assets/itens/Upgrades/speed_card.png" id="3_7k1kj"]
+[ext_resource type="FontFile" uid="uid://dc526gcuwx4sa" path="res://fonts/DungeonFont.ttf" id="4_yyyjw"]
+
+[node name="ItemOption" type="TextureRect"]
+offset_right = 400.0
+offset_bottom = 600.0
+texture = ExtResource("1_g0b6b")
+script = ExtResource("2_km2q3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.178
+anchor_top = 0.135
+anchor_right = 0.837
+anchor_bottom = 0.41
+offset_left = -0.200005
+offset_top = 1.0
+offset_right = -0.800018
+offset_bottom = -1.52588e-05
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+layout_mode = 0
+offset_right = 266.0
+offset_bottom = 162.0
+texture = ExtResource("3_7k1kj")
+stretch_mode = 5
+
+[node name="nome" type="Label" parent="."]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 25.0
+offset_right = 173.0
+offset_bottom = 70.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("4_yyyjw")
+theme_override_font_sizes/font_size = 36
+text = "Nome"
+vertical_alignment = 2
+
+[node name="detalhes" type="Label" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 282.0
+offset_right = 346.0
+offset_bottom = 514.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("4_yyyjw")
+theme_override_font_sizes/font_size = 50
+text = "Ganhe 50 de velocidade e fique feliz paizao aaaaaaaaaaa"
+autowrap_mode = 3
+
+[node name="level" type="Label" parent="."]
+layout_mode = 0
+offset_left = 227.0
+offset_top = 33.0
+offset_right = 348.0
+offset_bottom = 70.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("4_yyyjw")
+theme_override_font_sizes/font_size = 36
+text = "Level: 10"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

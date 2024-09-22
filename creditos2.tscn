@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://dc526gcuwx4sa" path="res://fonts/DungeonFont.ttf" id="1_b10j5"]
 [ext_resource type="Script" path="res://creditos2.gd" id="1_kiibr"]
-[ext_resource type="AudioStream" uid="uid://c4ovcduxxw2lh" path="res://sound/effect_menu1.MP3" id="3_ng038"]
+[ext_resource type="AudioStream" uid="uid://6mc0x5ctfosa" path="res://sound/misc_menu_4.wav" id="3_2tva0"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -73,7 +73,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="menu" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_ng038")
+stream = ExtResource("3_2tva0")
 volume_db = -10.0
 
 [connection signal="mouse_entered" from="ColorRect/Voltar" to="." method="_on_voltar_mouse_entered"]

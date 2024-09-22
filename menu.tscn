@@ -1,10 +1,14 @@
-[gd_scene load_steps=41 format=3 uid="uid://c1uk1snhdove5"]
+[gd_scene load_steps=48 format=3 uid="uid://c1uk1snhdove5"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_p4y0p"]
 [ext_resource type="FontFile" uid="uid://dc526gcuwx4sa" path="res://fonts/DungeonFont.ttf" id="1_xyx7m"]
-[ext_resource type="AudioStream" uid="uid://c4ovcduxxw2lh" path="res://sound/effect_menu1.MP3" id="3_08duu"]
 [ext_resource type="Texture2D" uid="uid://bsuhgwgrd4c8e" path="res://assets/WKRrf_.png" id="3_cnvbm"]
+[ext_resource type="Texture2D" uid="uid://bovyki8otoa2v" path="res://2d_lights_and_shadows_neutral_point_light.png" id="3_u8np7"]
+[ext_resource type="AudioStream" uid="uid://6mc0x5ctfosa" path="res://sound/misc_menu_4.wav" id="4_jsyvc"]
 [ext_resource type="AudioStream" uid="uid://dhbhdebof7yib" path="res://sound/musica_menu.MP3" id="5_e55xy"]
+[ext_resource type="Texture2D" uid="uid://f3k0pombk1ds" path="res://veigar.png" id="5_ht1gu"]
+[ext_resource type="AudioStream" uid="uid://djumguwwjniub" path="res://Janji - Heroes Tonight (feat. Johnning) _ Progressive House _ NCS - Copyright Free Music.mp3" id="6_pcr67"]
+[ext_resource type="Texture2D" uid="uid://bjn4i6rtx34ul" path="res://Screenshot_2024-09-22_152620-removebg-preview.png" id="7_ue8w4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sqt1k"]
 atlas = ExtResource("3_cnvbm")
@@ -221,8 +225,118 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 2.0
+"speed": 3.0
 }]
+
+[sub_resource type="Animation" id="Animation_1ohxe"]
+resource_name = "new_animation"
+length = 20.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect/AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(720, 1300), Vector2(720, 1300)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect/AnimatedSprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-1.90241, 1.74533]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect/PointLight2D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0333333, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-1.90241, 1.74533]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ColorRect/PointLight2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(720, 1300), Vector2(720, 1300)]
+}
+
+[sub_resource type="Animation" id="Animation_uwsqn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect/AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-265, 639)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect/AnimatedSprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.245593]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect/PointLight2D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.90241]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ColorRect/PointLight2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(720, 1300)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_htimq"]
+_data = {
+"RESET": SubResource("Animation_uwsqn"),
+"new_animation": SubResource("Animation_1ohxe")
+}
 
 [sub_resource type="Animation" id="Animation_fgx1w"]
 length = 0.001
@@ -310,13 +424,32 @@ offset_right = 1449.0
 offset_bottom = 899.0
 color = Color(0, 0, 0, 0.462745)
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TextureRect/ColorRect"]
+position = Vector2(-265, 639)
+rotation = -0.245593
+scale = Vector2(1.756, 1.756)
+sprite_frames = SubResource("SpriteFrames_pi71x")
+autoplay = "default"
+frame_progress = 0.937834
+offset = Vector2(0, -500)
+
+[node name="PointLight2D" type="PointLight2D" parent="TextureRect/ColorRect"]
+position = Vector2(720, 1300)
+rotation = -1.90241
+scale = Vector2(1.756, 1.756)
+color = Color(0.976471, 0.976471, 0.0431373, 0.713726)
+energy = 1.52
+texture = ExtResource("3_u8np7")
+offset = Vector2(0, -500)
+texture_scale = 2.0
+
 [node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/ColorRect"]
 layout_mode = 0
-offset_left = 126.0
-offset_top = 473.0
-offset_right = 259.0
-offset_bottom = 631.0
-scale = Vector2(1.81926, 1.81926)
+offset_left = 632.0
+offset_top = 402.0
+offset_right = 1262.0
+offset_bottom = 1055.0
+scale = Vector2(0.378079, 0.378079)
 
 [node name="Jogar" type="Button" parent="TextureRect/ColorRect/VBoxContainer"]
 clip_contents = true
@@ -325,8 +458,10 @@ theme_override_colors/font_hover_color = Color(0.645746, 0.300631, 0.170564, 1)
 theme_override_colors/font_pressed_color = Color(0.4, 0.172549, 0.0862745, 0.815686)
 theme_override_colors/font_focus_color = Color(0.4, 0.172549, 0.0862745, 1)
 theme_override_colors/font_color = Color(0.399028, 0.171773, 0.0870879, 1)
+theme_override_colors/font_outline_color = Color(0.862745, 0.372549, 0, 1)
+theme_override_constants/outline_size = 65
 theme_override_fonts/font = ExtResource("1_xyx7m")
-theme_override_font_sizes/font_size = 41
+theme_override_font_sizes/font_size = 206
 text = "Jogar"
 flat = true
 
@@ -337,8 +472,10 @@ theme_override_colors/font_hover_color = Color(0.645746, 0.300631, 0.170564, 1)
 theme_override_colors/font_pressed_color = Color(0.4, 0.172549, 0.0862745, 0.815686)
 theme_override_colors/font_focus_color = Color(0.4, 0.172549, 0.0862745, 1)
 theme_override_colors/font_color = Color(0.399028, 0.171773, 0.0870879, 1)
+theme_override_colors/font_outline_color = Color(0.862745, 0.372549, 0, 1)
+theme_override_constants/outline_size = 65
 theme_override_fonts/font = ExtResource("1_xyx7m")
-theme_override_font_sizes/font_size = 41
+theme_override_font_sizes/font_size = 206
 text = "Creditos
 "
 flat = true
@@ -350,34 +487,66 @@ theme_override_colors/font_hover_color = Color(0.645746, 0.300631, 0.170564, 1)
 theme_override_colors/font_pressed_color = Color(0.4, 0.172549, 0.0862745, 0.815686)
 theme_override_colors/font_focus_color = Color(0.4, 0.172549, 0.0862745, 1)
 theme_override_colors/font_color = Color(0.399028, 0.171773, 0.0870879, 1)
+theme_override_colors/font_outline_color = Color(0.862745, 0.372549, 0, 1)
+theme_override_constants/outline_size = 65
 theme_override_fonts/font = ExtResource("1_xyx7m")
-theme_override_font_sizes/font_size = 41
+theme_override_font_sizes/font_size = 206
 text = "Sair
 "
 flat = true
 
 [node name="RogueLixo" type="Label" parent="TextureRect/ColorRect"]
 layout_mode = 0
-offset_left = 79.0
-offset_top = 44.0
-offset_right = 384.0
-offset_bottom = 115.0
+offset_left = 3.0
+offset_top = -1.0
+offset_right = 742.0
+offset_bottom = 134.0
 scale = Vector2(1.95664, 1.89288)
 theme_override_colors/font_color = Color(0.451669, 0.180639, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.863197, 0.37203, 3.85046e-07, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0.729412, 1)
 theme_override_constants/shadow_outline_size = 15
 theme_override_fonts/font = ExtResource("1_xyx7m")
-theme_override_font_sizes/font_size = 70
+theme_override_font_sizes/font_size = 125
 text = "Rogue Lixo"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TextureRect/ColorRect"]
-position = Vector2(1039, 422)
-rotation = -0.245593
-scale = Vector2(1.756, 1.756)
-sprite_frames = SubResource("SpriteFrames_pi71x")
-autoplay = "default"
-frame_progress = 0.79808
+[node name="Btn" type="Button" parent="TextureRect/ColorRect"]
+layout_mode = 0
+offset_left = 1004.0
+offset_top = 76.0
+offset_right = 1033.0
+offset_bottom = 103.0
+flat = true
+
+[node name="btn2" type="Button" parent="TextureRect/ColorRect"]
+layout_mode = 0
+offset_left = 402.0
+offset_top = 138.0
+offset_right = 419.0
+offset_bottom = 168.0
+flat = true
+
+[node name="veigar" type="Sprite2D" parent="TextureRect/ColorRect"]
+visible = false
+position = Vector2(1134, 659)
+texture = ExtResource("5_ht1gu")
+
+[node name="sla" type="Sprite2D" parent="TextureRect/ColorRect"]
+visible = false
+position = Vector2(385, 768)
+scale = Vector2(0.655914, 0.655914)
+texture = ExtResource("7_ue8w4")
+
+[node name="music2" type="AudioStreamPlayer" parent="TextureRect/ColorRect"]
+stream = ExtResource("6_pcr67")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect"]
+libraries = {
+"": SubResource("AnimationLibrary_htimq")
+}
+autoplay = "new_animation"
 
 [node name="transition" type="AnimationPlayer" parent="."]
 libraries = {
@@ -395,13 +564,18 @@ grow_vertical = 2
 color = Color(0.00184107, 0.00184107, 0.00184107, 1)
 
 [node name="menu1" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_08duu")
+stream = ExtResource("4_jsyvc")
 volume_db = -10.0
 
 [node name="music_menu" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_e55xy")
 volume_db = -20.036
 autoplay = true
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
+position = Vector2(0, 3)
+color = Color(0.585062, 0.585062, 0.585062, 1)
 
 [connection signal="mouse_entered" from="TextureRect/ColorRect/VBoxContainer/Jogar" to="." method="_on_jogar_mouse_entered"]
 [connection signal="pressed" from="TextureRect/ColorRect/VBoxContainer/Jogar" to="." method="_on_jogar_pressed"]
@@ -410,4 +584,6 @@ autoplay = true
 [connection signal="pressed" from="TextureRect/ColorRect/VBoxContainer/Creditos" to="." method="_on_creditos_pressed"]
 [connection signal="mouse_entered" from="TextureRect/ColorRect/VBoxContainer/Sair" to="." method="_on_sair_mouse_entered"]
 [connection signal="pressed" from="TextureRect/ColorRect/VBoxContainer/Sair" to="." method="_on_sair_pressed"]
+[connection signal="pressed" from="TextureRect/ColorRect/Btn" to="." method="_on_btn_pressed"]
+[connection signal="pressed" from="TextureRect/ColorRect/btn2" to="." method="_on_btn_2_pressed"]
 [connection signal="animation_finished" from="transition" to="." method="_on_transition_animation_finished"]

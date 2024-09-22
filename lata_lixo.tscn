@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://d1vsuaao66px8"]
 
-[ext_resource type="Texture2D" uid="uid://dg11alrqsiog8" path="res://assets/lata_de_lixo.png" id="1_j1uqk"]
+[ext_resource type="Texture2D" uid="uid://dg11alrqsiog8" path="res://assets/lixo/lata_de_lixo.png" id="1_j1uqk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t40oo"]
 size = Vector2(19.213, 11.5191)
